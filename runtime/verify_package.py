@@ -46,19 +46,23 @@ def main() -> int:
 
     print("== 2) ONNX 测试向量 ==")
     import onnxruntime as ort
-    tv = json.loads((PKG / "evidence/test_vectors.json").read_text(encoding="utf-8"))
-    session = ort.InferenceSession(str(PKG / tv["onnx"]),
-                                   providers=["CPUExecutionProvider"])
-    inp = session.get_inputs()[0].name
+    tv_files = [p for p in ("test_vectors.json", "test_vectors_wide.json")
+                if (PKG / "evidence" / p).is_file()]
     worst = 0.0
-    for i, vec in enumerate(tv["vectors"]):
-        hist = np.asarray(vec["obs_history_frame_major"], dtype=np.float32)[None, :]
-        got = session.run(None, {inp: hist})[0][0]
-        exp = np.asarray(vec["expected_action"], dtype=np.float64)
-        err = float(np.abs(got - exp).max())
-        worst = max(worst, err)
-        print(f"  [{'OK' if err < 1e-4 else 'FAIL'}] vector{i}: max|Δ|={err:.2e}")
-        ok = ok and err < 1e-4
+    for tv_name in tv_files:
+        tv = json.loads((PKG / "evidence" / tv_name).read_text(encoding="utf-8"))
+        session = ort.InferenceSession(str(PKG / tv["onnx"]),
+                                       providers=["CPUExecutionProvider"])
+        inp = session.get_inputs()[0].name
+        print(f"  -- {tv['onnx']}")
+        for i, vec in enumerate(tv["vectors"]):
+            hist = np.asarray(vec["obs_history_frame_major"], dtype=np.float32)[None, :]
+            got = session.run(None, {inp: hist})[0][0]
+            exp = np.asarray(vec["expected_action"], dtype=np.float64)
+            err = float(np.abs(got - exp).max())
+            worst = max(worst, err)
+            print(f"  [{'OK' if err < 1e-4 else 'FAIL'}] vector{i}: max|Δ|={err:.2e}")
+            ok = ok and err < 1e-4
     print(f"  worst max|Δ| = {worst:.2e}（阈值 1e-4）")
 
     print("== 3) MuJoCo 模型结构 ==")

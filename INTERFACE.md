@@ -7,7 +7,7 @@
 
 | 项 | 值 |
 | --- | --- |
-| 文件 | `policy/v14_rise_deploy.onnx`（主交付）/ `policy/v14_full_closed_deploy.onnx` |
+| 文件 | **推荐** `policy/v14_rise_wide_deploy.onnx`（v1.1 宽指令）/ `policy/v14_rise_deploy.onnx`（v1.0 保守档）/ `policy/v14_full_closed_deploy.onnx`（平地） |
 | sha256 | 见 `SHA256SUMS.txt` / `evidence/provenance.json` |
 | 输入 | 名 `obs`，形状 `(batch, 125)`，dtype **float32**；**只有这一个输入** |
 | 输出 | 名 `actions`，形状 `(batch, 6)`，dtype float32 |
@@ -33,7 +33,8 @@ reset（上电/跌倒/切换）时把 5 帧全部填成当前帧（`reset_fill=c
 
 - `default_virtual = [−0.865168, −0.774701, +0.865169, +0.774700]`
   （左 rear, 左 shank, 右 rear, 右 shank；即 base 0.18 m 站姿）。
-- 指令范围（超范围会被内部裁剪）：`vx∈[−1.2,1.2]`、`wz∈[−1.0,1.0]`、`height∈[0.14,0.20]`。
+- 指令范围（超范围会被内部裁剪）：`vx∈[−1.2,1.2]`、`wz∈[−1.0,1.0]`、`height∈[0.14,0.20]`
+  （v1.1 训练/验证覆盖 vx ±1.5、wz ±1.2、高度 0.14–0.21，运行时裁剪可放宽）。
   默认站定指令 `(0, 0, 0.18)`。
 - 整帧最后再 `clip(-100,100)`（正常不会触发）。
 - `q_shank` 在真机侧由 `v14_leg_model.V14Leg.solve_loop(q_front, q_rear)` 逆解得到；
@@ -126,5 +127,7 @@ tau = clip(tau, ±40/±40/±20 按列)
 }
 ```
 
+两个 rise 策略（v1.1 宽指令 / v1.0 保守档）输入输出结构完全一致、可互换；各自的测试向量见
+`evidence/test_vectors.json`（v1.0）与 `evidence/test_vectors_wide.json`（v1.1）。
 `expected_action` 是 onnxruntime CPU 对该历史的输出；移植后用同一 125 维历史跑自己的
 实现，`max|Δ| < 1e-4` 即认为前向数值一致（浮点实现差异通常 <1e-5）。

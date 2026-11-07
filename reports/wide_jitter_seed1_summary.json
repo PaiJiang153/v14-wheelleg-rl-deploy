@@ -1,0 +1,172 @@
+{
+  "schema": "sim2sim.matrix_v14/1",
+  "trial_schema": "sim2sim.eval_v14/1",
+  "label": "wide_jitter1",
+  "generated_at": "2026-11-08T01:10:38+0800",
+  "onnx": "policy/v14_rise_wide_deploy.onnx",
+  "onnx_sha256": "7fa057a538dbfc937c35b2aae0da65291bec29e14c61b66e6cc63fbdf8dadb9f",
+  "xml": "/home/paimiomio/rl/model/rl_chassis_v14/mjcf/rl_chassis_v14_scene.xml",
+  "model": {
+    "xml": "/home/paimiomio/rl/model/rl_chassis_v14/mjcf/rl_chassis_v14_scene.xml",
+    "total_mass_kg": 14.189111,
+    "nq": 21,
+    "nv": 20,
+    "neq": 4,
+    "nu": 6
+  },
+  "duration_s": 10.0,
+  "profiles": [
+    "train"
+  ],
+  "init": {
+    "mode": "prone",
+    "jitter_scale": 1.0,
+    "seed": 1
+  },
+  "cases": [
+    "rise"
+  ],
+  "case_descriptions": {
+    "stand_h018": "站立 h=0.18",
+    "fwd_0p5": "前进 0.5 m/s",
+    "yaw_0p3": "左转 0.3 rad/s",
+    "height_0p20": "高度 0.20 m",
+    "rise": "趴姿起身 h=0.18"
+  },
+  "rows": [
+    {
+      "case": "rise",
+      "profile": "train",
+      "init": "prone",
+      "rise": {
+        "applicable": true,
+        "init": "prone",
+        "target_height_m": 0.18,
+        "height_threshold_m": 0.15,
+        "tilt_threshold_deg": 20.0,
+        "sustain_s": 0.3,
+        "rise_success": true,
+        "rise_time_s": 0.42,
+        "rise_end_s": 10.0,
+        "condition_first_s": 0.42,
+        "reached_height": true,
+        "max_height_m": 0.182565,
+        "final_height_m": 0.179182,
+        "max_height_error_m": 0.002565,
+        "final_height_error_m": -0.000818,
+        "stand_hold_fraction": 0.959
+      },
+      "rise_success": true,
+      "rise_time_s": 0.42,
+      "rise_target_height": 0.18,
+      "rise_max_height": 0.182565,
+      "rise_final_height": 0.179182,
+      "rise_stand_hold_fraction": 0.959,
+      "fall_evaluated_after_rise": true,
+      "duration_sim_s": 10.0,
+      "height_cmd": 0.18,
+      "height_mean": 0.179183,
+      "height_error": -0.000817,
+      "height_final": 0.179182,
+      "tilt_mean_deg": 0.485769,
+      "tilt_max_deg": 20.672408,
+      "vx_cmd": 0.0,
+      "vx_mean": -0.010495,
+      "vx_error": -0.010495,
+      "vx_body_mean": -0.010677,
+      "wz_cmd": 0.0,
+      "wz_mean": -0.013722,
+      "wz_error": -0.013722,
+      "wz_final": -0.013708,
+      "yaw_change_deg": -7.75391,
+      "travel_x_m": -0.044118,
+      "wheel_contact_mean": 2.0,
+      "both_wheels_fraction": 1.0,
+      "nonwheel_floor_steps": 17,
+      "nonwheel_floor_steps_after_rise": 0,
+      "nonwheel_floor_fraction": 0.017,
+      "nonwheel_floor_geoms": [
+        {
+          "geom": "base_link_c81_col",
+          "contact_samples": 23
+        },
+        {
+          "geom": "base_link_c96_col",
+          "contact_samples": 11
+        },
+        {
+          "geom": "base_link_c125_col",
+          "contact_samples": 11
+        },
+        {
+          "geom": "base_link_c95_col",
+          "contact_samples": 9
+        },
+        {
+          "geom": "base_link_c124_col",
+          "contact_samples": 9
+        }
+      ],
+      "connect_max_mm": 6.35752,
+      "connect_mean_mm": 0.29153,
+      "connect_drift_mm": -0.012106,
+      "fall_fallen": false,
+      "fall_time_s": null,
+      "fall_reason": null,
+      "checks": {
+        "not_fallen": true,
+        "rise_success": true,
+        "posture_ok": true,
+        "closed_chain_ok": true,
+        "closed_chain_stable": true,
+        "contact_clean_after_rise": true
+      },
+      "verdict": "PASS",
+      "torque_saturation_frac": {
+        "hip_mean": 0.0,
+        "wheel_mean": 0.0,
+        "per_joint": {
+          "rear_L": 0.0,
+          "knee_L": 0.0,
+          "wheel_L": 0.0,
+          "rear_R": 0.0,
+          "knee_R": 0.0,
+          "wheel_R": 0.0
+        }
+      },
+      "torque_demand_over_limit_frac": {
+        "hip_mean": 0.0,
+        "wheel_mean": 0.0
+      },
+      "torque_peak_Nm": {
+        "rear_L": 12.302443,
+        "knee_L": 19.709253,
+        "wheel_L": 3.211513,
+        "rear_R": 9.125717,
+        "knee_R": 18.0579,
+        "wheel_R": 4.875357
+      },
+      "trial_json": "/home/paimiomio/rl/sim2sim/out/wide_jitter1/rise__train.json",
+      "trial_npz": "/home/paimiomio/rl/sim2sim/out/wide_jitter1/rise__train.npz",
+      "wall_time_s": 1.448
+    }
+  ],
+  "runtime": {
+    "python": "3.10.12",
+    "mujoco": "3.2.3"
+  },
+  "args": {
+    "out_dir": "/home/paimiomio/rl/sim2sim/out/wide_jitter1",
+    "duration_s": 10.0,
+    "profiles": [
+      "train"
+    ],
+    "cases": [
+      "rise"
+    ],
+    "init": "prone",
+    "init_jitter": 1.0,
+    "init_seed": 1,
+    "command": "run_matrix.py --onnx policy/v14_rise_wide_deploy.onnx --label wide_jitter1 --init prone --init-jitter --init-seed 1 --profiles train --cases rise --duration 10"
+  }
+}

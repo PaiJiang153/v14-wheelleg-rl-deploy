@@ -13,11 +13,13 @@
 
 | 策略 | 文件 | 能力 |
 | --- | --- | --- |
-| **RISE（主交付）** | `policy/v14_rise_deploy.onnx` | **趴卧姿自主起身 → 保持平衡 → 站/走/转/高度跟踪** |
+| **RISE-WIDE（v1.1，推荐）** | `policy/v14_rise_wide_deploy.onnx` | **趴卧姿起身 + 保持 + vx ±1.5 m/s / wz ±1.2 rad/s / 高度 0.14–0.21 m 跟踪** |
+| RISE（v1.0 保守档） | `policy/v14_rise_deploy.onnx` | 趴卧姿起身 + 站/走/转/高度（宽指令跟踪误差略大） |
 | FLAT | `policy/v14_full_closed_deploy.onnx` | 站/走/转/高度跟踪（站姿起步；不保证趴卧起身） |
 
-- RISE 策略在完整闭链 MuJoCo 上从趴卧姿：**起身 0.50 s、末态高度 0.19 m、站姿保持 0.95**，
-  4 个指令工况 **4/4 PASS**，3 个扰动种子也 PASS（见 §5）。
+- RISE-WIDE（v1.1）在完整闭链 MuJoCo 上从趴卧姿：**22 条指令全部 PASS**，平均 |vx 误差| 0.035、
+  |wz 误差| 0.020、|高度误差| 0.003 m，起身 0.42 s；vx ±1.5、wz ±1.2、高度 0.14–0.21 全覆盖。
+- RISE（v1.0）从趴卧姿：起身 0.50 s、末态 0.19 m、保持 0.95，4/4 PASS + 3 扰动种子（见 §5）。
 - 训练全过程、失败尝试、诊断与复现命令：`reports/TRAINING_REPORT.md`。
 
 ## 2. 自检（拿到包先跑这三条）
@@ -96,8 +98,9 @@ FLAT 策略的站/走/转/高度验收：`reports/flat_sim2sim_summary.md`。
 
 - **只在 MuJoCo 完整闭链模型上验证**，没有实车数据；实车必须重新验证。
 - **±3.14 N·m 口径不可用**（见 §4.1）。
-- 训练/蒸馏覆盖的指令范围：`|vx| ≤ 0.4 m/s`、`|wz| ≤ 0.25 rad/s`、高度 0.16–0.20 m
-  （策略接口本身接受 |vx|≤1.2、|wz|≤1.0、高度 0.14–0.20，但超出训练范围精度会下降）。
+- v1.1（推荐）训练/验证范围：`|vx| ≤ 1.5 m/s`、`|wz| ≤ 1.2 rad/s`、高度 0.14–0.21 m；
+  实测平均误差 0.035 m/s / 0.020 rad/s / 0.003 m。高度 0.21 因腿长饱和在约 0.196 m。
+- v1.0 保守档的训练/蒸馏范围较窄（|vx|≤0.4 教师数据 + 后续 PPO），宽指令下误差更大。
 - 起身过程依赖「默认站姿 PD 先把车抬起来」的物理特性（部署 runtime 的 PD 默认目标
   就是站姿，所以可复现）；该特性在实车上受摩擦/时延影响。
 - 底部导轮/滚轮支撑板是 base_link 的固定几何（无独立关节），训练时按「蹭地」惩罚处理；
@@ -111,7 +114,8 @@ README.md                  ← 本文件
 INTERFACE.md               ← 接口/时序/硬件映射的精确合同
 SHA256SUMS.txt             ← 全部文件哈希（verify_package.py 会校验）
 policy/
-  v14_rise_deploy.onnx     ← 主交付：趴卧起身 + 站/走/转/高度
+  v14_rise_wide_deploy.onnx ← **推荐**：趴卧起身 + vx ±1.5 / wz ±1.2 / 高度 0.14–0.21
+  v14_rise_deploy.onnx     ← v1.0 保守档：趴卧起身 + 站/走/转/高度
   v14_full_closed_deploy.onnx
 runtime/
   policy_runtime.py        ← 部署参考数学：观测组装 + ONNX 推理 + 动作解码 + 闭链力矩映射
@@ -132,6 +136,8 @@ evidence/
   source_checkpoint_sha256.txt
 reports/
   TRAINING_REPORT.md       ← 完整训练报告（含失败尝试、诊断、复现命令）
+  wide_cmd_matrix.md / wide_compare.json / wide_summary.json
+  wide_jitter_seed{1,7,42}_summary.json
   rise_from_prone_sim2sim_summary.md/json
   flat_sim2sim_summary.md/json
 media/

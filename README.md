@@ -11,7 +11,7 @@
 | [`AI_HANDOFF_PROMPT.md`](AI_HANDOFF_PROMPT.md) | **给接手 AI 的任务说明（可直接复制）** |
 | [`README_ZH.md`](README_ZH.md) | 交接总览：自检、部署要点、已知限制、文件清单 |
 | [`INTERFACE.md`](INTERFACE.md) | 精确接口合同：ONNX 输入/历史布局/25 维观测/动作解码/闭链力矩映射/硬件映射 |
-| [`policy/`](policy/) | `v14_rise_deploy.onnx`（主交付）+ `v14_full_closed_deploy.onnx` |
+| [`policy/`](policy/) | `v14_rise_wide_deploy.onnx`（**v1.1 推荐，宽指令**）+ `v14_rise_deploy.onnx`（v1.0）+ `v14_full_closed_deploy.onnx` |
 | [`model/`](model/) | 完整 v14 闭链 MJCF（场景/网格/URDF），与训练/验收同一份 |
 | [`runtime/`](runtime/) | 参考运行时：观测组装+推理+动作解码+闭链力矩映射、闭链运动学、已验收的闭环回放、自检脚本 |
 | [`evidence/`](evidence/) | 5 组 ONNX 数值测试向量、来源/哈希/训练配置存档 |
@@ -30,8 +30,11 @@ python runtime/sim2sim_replay.py --onnx policy/v14_rise_deploy.onnx \
 
 ## 已验证（完整闭链 MuJoCo，40/40/20 N·m）
 
-从趴卧姿开始，10 s 闭环：起身 **0.50 s**、末态高度 **0.1888–0.2018 m**、站姿保持 **0.95**，
-站定/前进/转向/高度 **4/4 PASS**；趴卧初始位姿加扰动（base ±2 cm / yaw ±0.3 / 关节 ±0.05）3 个种子也 PASS。
+**v1.1（推荐，`v14_rise_wide_deploy.onnx`）**：从趴卧姿 22 条宽指令矩阵 **22/22 PASS** ——
+vx ±1.5 m/s、wz ±1.2 rad/s、高度 0.14–0.21 m；平均 |vx 误差| **0.035**、|wz 误差| **0.020**、
+|高度误差| **0.003 m**，起身 **0.34–0.50 s**；扰动种子 1/7/42 也 PASS。详见 `reports/wide_cmd_matrix.md`。
+
+**v1.0（`v14_rise_deploy.onnx`）**：起身 0.50 s、末态 0.1888–0.2018 m、保持 0.95，4/4 PASS + 3 扰动种子。
 
 ![起身分帧](media/rise_sequence.png)
 

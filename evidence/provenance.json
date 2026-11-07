@@ -13,6 +13,14 @@
       "file": "policy/v14_full_closed_deploy.onnx",
       "sha256": "f59facc5866834c9e52cf616391389c5bc5ebb90e09d37920211a18ed117eccf",
       "capability": "站/走/转/高度跟踪（站姿起步；不保证趴卧起身）"
+    },
+    "rise_wide": {
+      "file": "policy/v14_rise_wide_deploy.onnx",
+      "sha256": "7fa057a538dbfc937c35b2aae0da65291bec29e14c61b66e6cc63fbdf8dadb9f",
+      "capability": "趴卧姿起身 + 保持 + vx ±1.5 m/s / wz ±1.2 rad/s / 高度 0.14–0.21 m",
+      "source_checkpoint": "logs/rsl_rl/wheelleg_v14_rise/2026-11-08_00-47-12_riseW4_final/model_5648.pt",
+      "source_checkpoint_sha256": "f07c09a317d5e422b67d2d40a6d5fe066741109c8569d5461e9e28f3d5649c1e",
+      "training": "固定宽指令范围精调 800 iter @1024 env，LR 1e-4，entropy 0.002；新增 height_fine 窄核奖励"
     }
   },
   "training": {
@@ -47,6 +55,22 @@
       "1": "PASS (rise 0.47s)",
       "7": "PASS (0.48s)",
       "42": "PASS (0.48s)"
+    },
+    "wide": {
+      "matrix": "reports/wide_cmd_matrix.md",
+      "cases": 22,
+      "pass": "22/22",
+      "mean_abs_err": {
+        "vx": 0.0349,
+        "wz": 0.02,
+        "height_m": 0.0029
+      },
+      "rise_time_s": "0.34–0.50",
+      "jitter_seeds": {
+        "1": "PASS",
+        "7": "PASS",
+        "42": "PASS"
+      }
     }
   },
   "limits": [
