@@ -1,0 +1,979 @@
+decimation: 2
+scene:
+  num_envs: 1024
+  env_spacing: 2.0
+  terrain:
+    init_state:
+      pos: !!python/tuple
+      - 0.0
+      - 0.0
+      - 0.0
+      rot: !!python/tuple
+      - 1.0
+      - 0.0
+      - 0.0
+      - 0.0
+      lin_vel: !!python/tuple
+      - 0.0
+      - 0.0
+      - 0.0
+      ang_vel: !!python/tuple
+      - 0.0
+      - 0.0
+      - 0.0
+      joint_pos:
+        .*: 0.0
+      joint_vel:
+        .*: 0.0
+    spec_fn: !!python/name:mjlab.entity.entity.%3Clambda%3E ''
+    articulation: null
+    sort_actuators: false
+    lights: !!python/tuple
+    - name: sun
+      body: world
+      mode: fixed
+      target: null
+      type: directional
+      castshadow: true
+      pos: !!python/tuple
+      - 0.0
+      - 0.0
+      - 1.5
+      dir: !!python/tuple
+      - 0.0
+      - 0.0
+      - -1.0
+      cutoff: 45.0
+      exponent: 10.0
+      diffuse: null
+      specular: null
+      ambient: null
+      active: true
+      attenuation: !!python/tuple
+      - 1.0
+      - 0.0
+      - 0.0
+    cameras: !!python/tuple []
+    textures: !!python/tuple
+    - name: groundplane
+      type: 2d
+      builtin: checker
+      rgb1: !!python/tuple
+      - 0.2
+      - 0.3
+      - 0.4
+      rgb2: !!python/tuple
+      - 0.1
+      - 0.2
+      - 0.3
+      width: 300
+      height: 300
+      mark: edge
+      markrgb: !!python/tuple
+      - 0.8
+      - 0.8
+      - 0.8
+      random: 0.01
+      file: null
+      cubefiles: null
+      gridsize: null
+      gridlayout: null
+      nchannel: 3
+      hflip: false
+      vflip: false
+    materials: !!python/tuple
+    - name: groundplane
+      rgba: !!python/tuple
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      texuniform: true
+      texrepeat: !!python/tuple
+      - 4.0
+      - 4.0
+      reflectance: 0.2
+      texture: groundplane
+      geom_names_expr: !!python/tuple
+      - terrain$
+    meshes: !!python/tuple []
+    geoms: !!python/tuple []
+    collisions: !!python/tuple []
+    terrain_type: plane
+    terrain_generator: null
+    env_spacing: 2.0
+    max_init_terrain_level: null
+    num_envs: 1024
+    debug_vis: false
+  entities:
+    robot:
+      init_state:
+        pos: !!python/tuple
+        - 0.0
+        - 0.0
+        - 0.18
+        rot: !!python/tuple
+        - 1.0
+        - 0.0
+        - 0.0
+        - 0.0
+        lin_vel: !!python/tuple
+        - 0.0
+        - 0.0
+        - 0.0
+        ang_vel: !!python/tuple
+        - 0.0
+        - 0.0
+        - 0.0
+        joint_pos:
+          Left_front_joint: -1.7989040170532495
+          Left_front_child1_joint: 0.7746873579768888
+          Left_front_child2_joint: -0.6156620032189227
+          Left_front_child3_joint: 0.7747131468903197
+          Left_rear_joint: -0.865168
+          Left_rear_child1_joint: -0.774701
+          Left_wheel_joint: 0.0
+          Right_front_joint: 1.7988876224908894
+          Right_front_child1_joint: -0.7746859678028744
+          Right_front_child2_joint: 0.6156392130803293
+          Right_front_child3_joint: -0.7746874871079081
+          Right_rear_joint: 0.865169
+          Right_rear_child1_joint: 0.7747
+          Right_wheel_joint: 0.0
+        joint_vel:
+          .*: 0.0
+      spec_fn: !!python/name:mjlab_wheelleg_v14.env_cfg.spec_fn ''
+      articulation:
+        actuators: !!python/tuple
+        - target_names_expr: !!python/tuple
+          - Left_front_joint
+          transmission_type: !!python/object/apply:mjlab.actuator.actuator.TransmissionType
+          - joint
+          armature: null
+          frictionloss: null
+          viscous_damping: null
+          delay_min_lag: 0
+          delay_max_lag: 0
+          delay_hold_prob: 0.0
+          delay_update_period: 0
+          delay_per_env_phase: true
+          command_field: null
+        - target_names_expr: !!python/tuple
+          - Left_rear_joint
+          transmission_type: !!python/object/apply:mjlab.actuator.actuator.TransmissionType
+          - joint
+          armature: null
+          frictionloss: null
+          viscous_damping: null
+          delay_min_lag: 0
+          delay_max_lag: 0
+          delay_hold_prob: 0.0
+          delay_update_period: 0
+          delay_per_env_phase: true
+          command_field: null
+        - target_names_expr: !!python/tuple
+          - Left_wheel_joint
+          transmission_type: !!python/object/apply:mjlab.actuator.actuator.TransmissionType
+          - joint
+          armature: null
+          frictionloss: null
+          viscous_damping: null
+          delay_min_lag: 0
+          delay_max_lag: 0
+          delay_hold_prob: 0.0
+          delay_update_period: 0
+          delay_per_env_phase: true
+          command_field: null
+        - target_names_expr: !!python/tuple
+          - Right_front_joint
+          transmission_type: !!python/object/apply:mjlab.actuator.actuator.TransmissionType
+          - joint
+          armature: null
+          frictionloss: null
+          viscous_damping: null
+          delay_min_lag: 0
+          delay_max_lag: 0
+          delay_hold_prob: 0.0
+          delay_update_period: 0
+          delay_per_env_phase: true
+          command_field: null
+        - target_names_expr: !!python/tuple
+          - Right_rear_joint
+          transmission_type: !!python/object/apply:mjlab.actuator.actuator.TransmissionType
+          - joint
+          armature: null
+          frictionloss: null
+          viscous_damping: null
+          delay_min_lag: 0
+          delay_max_lag: 0
+          delay_hold_prob: 0.0
+          delay_update_period: 0
+          delay_per_env_phase: true
+          command_field: null
+        - target_names_expr: !!python/tuple
+          - Right_wheel_joint
+          transmission_type: !!python/object/apply:mjlab.actuator.actuator.TransmissionType
+          - joint
+          armature: null
+          frictionloss: null
+          viscous_damping: null
+          delay_min_lag: 0
+          delay_max_lag: 0
+          delay_hold_prob: 0.0
+          delay_update_period: 0
+          delay_per_env_phase: true
+          command_field: null
+        soft_joint_pos_limit_factor: 1.0
+      sort_actuators: false
+      lights: !!python/tuple []
+      cameras: !!python/tuple []
+      textures: !!python/tuple []
+      materials: !!python/tuple []
+      meshes: !!python/tuple []
+      geoms: !!python/tuple []
+      collisions: !!python/tuple []
+  sensors: !!python/tuple
+  - name: body_contact
+    primary:
+      mode: geom
+      pattern: .*_c[0-9]+_col
+      entity: robot
+      exclude: !!python/tuple []
+    secondary:
+      mode: body
+      pattern: terrain
+      entity: null
+      exclude: !!python/tuple []
+    fields: !!python/tuple
+    - force
+    reduce: netforce
+    num_slots: 1
+    secondary_policy: first
+    track_air_time: false
+    global_frame: false
+    history_length: 2
+    debug: false
+  extent: 2.0
+  spec_fn: null
+observations:
+  actor:
+    terms:
+      ang_vel:
+        func: &id001 !!python/name:mjlab_wheelleg_v14.mdp.obs_ang_vel ''
+        params: {}
+        noise:
+          operation: add
+          _tensor_cache: {}
+          n_min: -0.2
+          n_max: 0.2
+        clip: !!python/tuple
+        - -100.0
+        - 100.0
+        scale: 0.25
+        delay_min_lag: 0
+        delay_max_lag: 0
+        delay_per_env: true
+        delay_hold_prob: 0.0
+        delay_update_period: 0
+        delay_per_env_phase: true
+        history_length: 0
+        flatten_history_dim: true
+      gravity:
+        func: &id002 !!python/name:mjlab_wheelleg_v14.mdp.obs_gravity ''
+        params: {}
+        noise:
+          operation: add
+          _tensor_cache: {}
+          n_min: -0.05
+          n_max: 0.05
+        clip: !!python/tuple
+        - -100.0
+        - 100.0
+        scale: null
+        delay_min_lag: 0
+        delay_max_lag: 0
+        delay_per_env: true
+        delay_hold_prob: 0.0
+        delay_update_period: 0
+        delay_per_env_phase: true
+        history_length: 0
+        flatten_history_dim: true
+      commands:
+        func: &id003 !!python/name:mjlab.envs.mdp.observations.generated_commands ''
+        params:
+          command_name: cmd
+        noise: null
+        clip: !!python/tuple
+        - -100.0
+        - 100.0
+        scale: !!python/tuple
+        - 2.0
+        - 0.25
+        - 5.0
+        delay_min_lag: 0
+        delay_max_lag: 0
+        delay_per_env: true
+        delay_hold_prob: 0.0
+        delay_update_period: 0
+        delay_per_env_phase: true
+        history_length: 0
+        flatten_history_dim: true
+      hip_knee_pos:
+        func: &id004 !!python/name:mjlab_wheelleg_v14.mdp.obs_joint_pos ''
+        params: {}
+        noise:
+          operation: add
+          _tensor_cache: {}
+          n_min: -0.02
+          n_max: 0.02
+        clip: !!python/tuple
+        - -100.0
+        - 100.0
+        scale: null
+        delay_min_lag: 0
+        delay_max_lag: 0
+        delay_per_env: true
+        delay_hold_prob: 0.0
+        delay_update_period: 0
+        delay_per_env_phase: true
+        history_length: 0
+        flatten_history_dim: true
+      joint_vel:
+        func: &id005 !!python/name:mjlab_wheelleg_v14.mdp.obs_joint_vel ''
+        params: {}
+        noise:
+          operation: add
+          _tensor_cache: {}
+          n_min: -1.5
+          n_max: 1.5
+        clip: !!python/tuple
+        - -100.0
+        - 100.0
+        scale: 0.05
+        delay_min_lag: 0
+        delay_max_lag: 0
+        delay_per_env: true
+        delay_hold_prob: 0.0
+        delay_update_period: 0
+        delay_per_env_phase: true
+        history_length: 0
+        flatten_history_dim: true
+      applied_action:
+        func: &id006 !!python/name:mjlab_wheelleg_v14.mdp.obs_applied_action ''
+        params: {}
+        noise: null
+        clip: !!python/tuple
+        - -100.0
+        - 100.0
+        scale: null
+        delay_min_lag: 0
+        delay_max_lag: 0
+        delay_per_env: true
+        delay_hold_prob: 0.0
+        delay_update_period: 0
+        delay_per_env_phase: true
+        history_length: 0
+        flatten_history_dim: true
+    concatenate_terms: true
+    concatenate_dim: -1
+    enable_corruption: true
+    history_length: 5
+    flatten_history_dim: true
+    nan_policy: disabled
+    nan_check_per_term: true
+  critic:
+    terms:
+      ang_vel:
+        func: *id001
+        params: {}
+        noise: null
+        clip: !!python/tuple
+        - -100.0
+        - 100.0
+        scale: 0.25
+        delay_min_lag: 0
+        delay_max_lag: 0
+        delay_per_env: true
+        delay_hold_prob: 0.0
+        delay_update_period: 0
+        delay_per_env_phase: true
+        history_length: 0
+        flatten_history_dim: true
+      gravity:
+        func: *id002
+        params: {}
+        noise: null
+        clip: !!python/tuple
+        - -100.0
+        - 100.0
+        scale: null
+        delay_min_lag: 0
+        delay_max_lag: 0
+        delay_per_env: true
+        delay_hold_prob: 0.0
+        delay_update_period: 0
+        delay_per_env_phase: true
+        history_length: 0
+        flatten_history_dim: true
+      commands:
+        func: *id003
+        params:
+          command_name: cmd
+        noise: null
+        clip: !!python/tuple
+        - -100.0
+        - 100.0
+        scale: !!python/tuple
+        - 2.0
+        - 0.25
+        - 5.0
+        delay_min_lag: 0
+        delay_max_lag: 0
+        delay_per_env: true
+        delay_hold_prob: 0.0
+        delay_update_period: 0
+        delay_per_env_phase: true
+        history_length: 0
+        flatten_history_dim: true
+      hip_knee_pos:
+        func: *id004
+        params: {}
+        noise: null
+        clip: !!python/tuple
+        - -100.0
+        - 100.0
+        scale: null
+        delay_min_lag: 0
+        delay_max_lag: 0
+        delay_per_env: true
+        delay_hold_prob: 0.0
+        delay_update_period: 0
+        delay_per_env_phase: true
+        history_length: 0
+        flatten_history_dim: true
+      joint_vel:
+        func: *id005
+        params: {}
+        noise: null
+        clip: !!python/tuple
+        - -100.0
+        - 100.0
+        scale: 0.05
+        delay_min_lag: 0
+        delay_max_lag: 0
+        delay_per_env: true
+        delay_hold_prob: 0.0
+        delay_update_period: 0
+        delay_per_env_phase: true
+        history_length: 0
+        flatten_history_dim: true
+      applied_action:
+        func: *id006
+        params: {}
+        noise: null
+        clip: !!python/tuple
+        - -100.0
+        - 100.0
+        scale: null
+        delay_min_lag: 0
+        delay_max_lag: 0
+        delay_per_env: true
+        delay_hold_prob: 0.0
+        delay_update_period: 0
+        delay_per_env_phase: true
+        history_length: 0
+        flatten_history_dim: true
+    concatenate_terms: true
+    concatenate_dim: -1
+    enable_corruption: false
+    history_length: 5
+    flatten_history_dim: true
+    nan_policy: disabled
+    nan_check_per_term: true
+actions:
+  wheelleg:
+    entity_name: robot
+    clip: null
+    kp: 20.0
+    kd: 1.0
+    wheel_kd: 0.2
+    pos_action_scale: 0.5
+    vel_action_scale: 10.0
+    effort_limit: !!python/tuple
+    - 40.0
+    - 40.0
+    - 20.0
+    - 40.0
+    - 40.0
+    - 20.0
+    action_clip: 3.0
+    actuator_tau: 0.015
+    delay_steps: 1
+    kp_range: !!python/tuple
+    - 0.8
+    - 1.2
+    kd_range: !!python/tuple
+    - 0.7
+    - 1.4
+    effort_range: !!python/tuple
+    - 0.8
+    - 1.1
+events:
+  wheel_friction:
+    func: !!python/name:mjlab.envs.mdp.dr.geom.geom_friction ''
+    params:
+      asset_cfg:
+        name: robot
+        joint_names: null
+        joint_ids: !!python/object/apply:builtins.slice
+        - null
+        - null
+        - null
+        body_names: null
+        body_ids: !!python/object/apply:builtins.slice
+        - null
+        - null
+        - null
+        geom_names: !!python/tuple
+        - Left_wheel_link_col
+        - Right_wheel_Link_col
+        geom_ids: !!python/object/apply:builtins.slice
+        - null
+        - null
+        - null
+        site_names: null
+        site_ids: !!python/object/apply:builtins.slice
+        - null
+        - null
+        - null
+        actuator_names: null
+        actuator_ids: !!python/object/apply:builtins.slice
+        - null
+        - null
+        - null
+        tendon_names: null
+        tendon_ids: !!python/object/apply:builtins.slice
+        - null
+        - null
+        - null
+        camera_names: null
+        camera_ids: !!python/object/apply:builtins.slice
+        - null
+        - null
+        - null
+        light_names: null
+        light_ids: !!python/object/apply:builtins.slice
+        - null
+        - null
+        - null
+        material_names: null
+        material_ids: !!python/object/apply:builtins.slice
+        - null
+        - null
+        - null
+        texture_names: null
+        texture_ids: !!python/object/apply:builtins.slice
+        - null
+        - null
+        - null
+        pair_names: null
+        pair_ids: !!python/object/apply:builtins.slice
+        - null
+        - null
+        - null
+        preserve_order: false
+      operation: abs
+      axes:
+      - 0
+      ranges: !!python/tuple
+      - 0.6
+      - 1.4
+    mode: startup
+    interval_range_s: null
+    is_global_time: false
+    min_step_count_between_reset: 0
+  base_mass:
+    func: !!python/name:mjlab.envs.mdp.dr.body.body_mass ''
+    params:
+      asset_cfg:
+        name: robot
+        joint_names: null
+        joint_ids: !!python/object/apply:builtins.slice
+        - null
+        - null
+        - null
+        body_names: !!python/tuple
+        - base_link
+        body_ids: !!python/object/apply:builtins.slice
+        - null
+        - null
+        - null
+        geom_names: null
+        geom_ids: !!python/object/apply:builtins.slice
+        - null
+        - null
+        - null
+        site_names: null
+        site_ids: !!python/object/apply:builtins.slice
+        - null
+        - null
+        - null
+        actuator_names: null
+        actuator_ids: !!python/object/apply:builtins.slice
+        - null
+        - null
+        - null
+        tendon_names: null
+        tendon_ids: !!python/object/apply:builtins.slice
+        - null
+        - null
+        - null
+        camera_names: null
+        camera_ids: !!python/object/apply:builtins.slice
+        - null
+        - null
+        - null
+        light_names: null
+        light_ids: !!python/object/apply:builtins.slice
+        - null
+        - null
+        - null
+        material_names: null
+        material_ids: !!python/object/apply:builtins.slice
+        - null
+        - null
+        - null
+        texture_names: null
+        texture_ids: !!python/object/apply:builtins.slice
+        - null
+        - null
+        - null
+        pair_names: null
+        pair_ids: !!python/object/apply:builtins.slice
+        - null
+        - null
+        - null
+        preserve_order: false
+      operation: add
+      ranges: !!python/tuple
+      - -2.0
+      - 2.0
+    mode: startup
+    interval_range_s: null
+    is_global_time: false
+    min_step_count_between_reset: 0
+  reset_mixed_start:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.ResetMixedStart ''
+    params:
+      prone_prob: 0.35
+      crouch_prob: 0.45
+      crouch_height: 0.1
+      steps_per_iter: 48
+      stage_schedule: !!python/tuple
+      - !!python/tuple
+        - 150.0
+        - 0.0
+        - 0.55
+        - 0.13
+      - !!python/tuple
+        - 300.0
+        - 0.0
+        - 0.5
+        - 0.11
+      - !!python/tuple
+        - 450.0
+        - 0.1
+        - 0.45
+        - 0.11
+      - !!python/tuple
+        - 650.0
+        - 0.25
+        - 0.4
+        - 0.1
+      - !!python/tuple
+        - 850.0
+        - 0.4
+        - 0.3
+        - 0.1
+      - !!python/tuple
+        - 1000000000.0
+        - 0.5
+        - 0.25
+        - 0.1
+      prone_assist_steps: 0
+      prone_assist_decay_iters: 1.0
+      crouch_h_spread: 0.02
+      crouch_pitch: 0.3
+      crouch_roll: 0.1
+      post_rise_prob: 0.25
+      post_rise_states: /home/paimiomio/rl/model/rl_chassis_v14/states/passive_rise_qpos.npz
+      stand_base_z: 0.18
+      prone_base_z: 0.034425913
+      joint_jitter: 0.02
+      root_z_jitter: !!python/tuple
+      - 0.0
+      - 0.01
+      xy_jitter: 0.02
+      yaw_range: 0.3
+      velocity_range: !!python/tuple
+      - 0.2
+      - 0.2
+      - 0.2
+      stage_base_iters: 2999.0
+    mode: reset
+    interval_range_s: null
+    is_global_time: false
+    min_step_count_between_reset: 0
+seed: 42
+sim:
+  nconmax: 256
+  njmax: 2048
+  contact_sensor_maxmatch: 128
+  broadphase: null
+  broadphase_filter: null
+  ls_parallel: null
+  mujoco:
+    timestep: 0.005
+    integrator: euler
+    impratio: 1.0
+    cone: pyramidal
+    jacobian: auto
+    solver: newton
+    iterations: 100
+    tolerance: 1.0e-08
+    ls_iterations: 50
+    ls_tolerance: 0.01
+    ccd_iterations: 50
+    gravity: !!python/tuple
+    - 0.0
+    - 0.0
+    - -9.81
+    disableflags: !!python/tuple []
+    enableflags: !!python/tuple []
+  nan_guard:
+    enabled: false
+    buffer_size: 100
+    output_dir: /tmp/mjlab/nan_dumps
+    max_envs_to_dump: 5
+viewer:
+  origin_type: !!python/object/apply:mjlab.viewer.viewer_config.OriginType
+  - 4
+  height: 240
+  width: 320
+  enable_reflections: true
+  enable_shadows: true
+  geom_group: !!python/tuple
+  - 1
+  - 1
+  - 1
+  - 0
+  - 0
+  - 0
+  site_group: !!python/tuple
+  - 1
+  - 1
+  - 1
+  - 0
+  - 0
+  - 0
+  env_idx: 0
+  max_extra_envs: 2
+  reward_bar_max_terms: 20
+  distance: 1.5
+  elevation: -10.0
+  azimuth: 90.0
+  fovy: null
+  lookat: !!python/tuple
+  - 0.0
+  - 0.0
+  - 0.0
+  entity_name: robot
+  body_name: base_link
+episode_length_s: 20.0
+rewards:
+  track_lin_vel:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.wrapped ''
+    params: {}
+    weight: 1.0
+  track_yaw_vel:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.wrapped ''
+    params: {}
+    weight: 1.0
+  stand_still:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.wrapped ''
+    params: {}
+    weight: 1.0
+  yaw_hold:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.wrapped ''
+    params: {}
+    weight: 1.0
+  height:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.wrapped ''
+    params: {}
+    weight: 1.0
+  height_under:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.wrapped ''
+    params: {}
+    weight: 1.0
+  theta0_sync:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.wrapped ''
+    params: {}
+    weight: 1.0
+  lin_vel_z:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.wrapped ''
+    params: {}
+    weight: 1.0
+  ang_vel_xy:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.wrapped ''
+    params: {}
+    weight: 1.0
+  upright:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.wrapped ''
+    params: {}
+    weight: 1.0
+  upright_fine:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.wrapped ''
+    params: {}
+    weight: 1.0
+  hip_knee_vel:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.wrapped ''
+    params: {}
+    weight: 1.0
+  dof_acc:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.wrapped ''
+    params: {}
+    weight: 1.0
+  torque:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.wrapped ''
+    params: {}
+    weight: 1.0
+  action_rate:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.wrapped ''
+    params: {}
+    weight: 1.0
+  action_smooth:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.wrapped ''
+    params: {}
+    weight: 1.0
+  bad_contact:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.wrapped ''
+    params:
+      grace_s: 4.5
+    weight: 1.0
+  height_progress:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.wrapped ''
+    params: {}
+    weight: 1.0
+terminations:
+  time_out:
+    func: !!python/name:mjlab.envs.mdp.terminations.time_out ''
+    params: {}
+    time_out: true
+  sustained_tilt:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.SustainedTilt ''
+    params:
+      tilt_cos: -0.1
+      duration_s: 1.0
+      grace_s: 4.5
+    time_out: false
+  base_too_low:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.BaseHeightTermination ''
+    params:
+      min_height: 0.06
+      duration_s: 0.3
+      grace_s: 4.5
+    time_out: false
+commands:
+  cmd:
+    resampling_time_range: !!python/tuple
+    - 5.0
+    - 5.0
+    debug_vis: false
+    lin_vel_range: !!python/tuple
+    - -1.2
+    - 1.2
+    ang_vel_range: !!python/tuple
+    - -1.0
+    - 1.0
+    height_range: !!python/tuple
+    - 0.18
+    - 0.18
+    standing_prob: 1.0
+curriculum:
+  command_standing:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.CommandStandingCurriculum ''
+    params:
+      stages: !!python/tuple
+      - 1.0
+      - 0.5
+      ep_len_threshold: 800.0
+      window: 400
+      height_ranges: !!python/tuple
+      - !!python/tuple
+        - 0.18
+        - 0.18
+      - !!python/tuple
+        - 0.14
+        - 0.2
+      cmd_lin_init: 1.2
+      cmd_lin_max: 1.2
+      cmd_ang_init: 1.0
+      cmd_ang_max: 1.0
+      cmd_step: 0.1
+      track_threshold: 0.85
+      cmd_cooldown_iters: 50
+metrics:
+  height_err:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.metric_height_err ''
+    params: {}
+    per_substep: false
+    reduce: mean
+  speed_abs:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.metric_speed_abs ''
+    params: {}
+    per_substep: false
+    reduce: mean
+  stand_drift:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.metric_stand_drift ''
+    params: {}
+    per_substep: false
+    reduce: mean
+  stand_height:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.metric_stand_height ''
+    params: {}
+    per_substep: false
+    reduce: mean
+  stand_height_cmd:
+    func: !!python/name:mjlab_wheelleg_v14.mdp.metric_stand_height_cmd ''
+    params: {}
+    per_substep: false
+    reduce: mean
+  rise_frac_prone:
+    func: &id007 !!python/name:mjlab_wheelleg_v14.mdp.metric_rise_frac ''
+    params:
+      kind: prone
+    per_substep: false
+    reduce: mean
+  rise_frac_prone_low:
+    func: *id007
+    params:
+      kind: prone
+      height: 0.1
+    per_substep: false
+    reduce: mean
+  rise_frac_post:
+    func: *id007
+    params:
+      kind: post
+    per_substep: false
+    reduce: mean
+  rise_frac_crouch:
+    func: *id007
+    params:
+      kind: crouch
+    per_substep: false
+    reduce: mean
+recorders: {}
+is_finite_horizon: false
+auto_reset: true
+scale_rewards_by_dt: true

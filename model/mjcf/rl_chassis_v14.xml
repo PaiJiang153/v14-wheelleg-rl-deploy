@@ -1,0 +1,901 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="rl_chassis_v14">
+  <!-- 由 tools/make_mjcf_pins.py 生成；闭链 site 由 tools/pin_loops.py 从 STL 圆孔几何识别（装配位姿下闭合误差 0）。
+       坐标系 x 前 / y 左 / z 上，关节轴 = 0 0 1（与 URDF 一致）；基座带 freejoint，home keyframe 里基座比地面高 2 mm 生成。-->
+  <compiler angle="radian" autolimits="true" />
+  <default>
+    <geom contype="1" conaffinity="0" />
+    <joint damping="0.02" armature="0.01" />
+  </default>
+  <asset>
+    <mesh name="base_link" file="../meshes/base_link.STL" />
+    <mesh name="base_link_c00" file="../meshes/convex/base_link_c00.STL" />
+    <mesh name="base_link_c01" file="../meshes/convex/base_link_c01.STL" />
+    <mesh name="base_link_c02" file="../meshes/convex/base_link_c02.STL" />
+    <mesh name="base_link_c03" file="../meshes/convex/base_link_c03.STL" />
+    <mesh name="base_link_c04" file="../meshes/convex/base_link_c04.STL" />
+    <mesh name="base_link_c05" file="../meshes/convex/base_link_c05.STL" />
+    <mesh name="base_link_c06" file="../meshes/convex/base_link_c06.STL" />
+    <mesh name="base_link_c07" file="../meshes/convex/base_link_c07.STL" />
+    <mesh name="base_link_c08" file="../meshes/convex/base_link_c08.STL" />
+    <mesh name="base_link_c09" file="../meshes/convex/base_link_c09.STL" />
+    <mesh name="base_link_c10" file="../meshes/convex/base_link_c10.STL" />
+    <mesh name="base_link_c11" file="../meshes/convex/base_link_c11.STL" />
+    <mesh name="base_link_c12" file="../meshes/convex/base_link_c12.STL" />
+    <mesh name="base_link_c13" file="../meshes/convex/base_link_c13.STL" />
+    <mesh name="base_link_c14" file="../meshes/convex/base_link_c14.STL" />
+    <mesh name="base_link_c15" file="../meshes/convex/base_link_c15.STL" />
+    <mesh name="base_link_c16" file="../meshes/convex/base_link_c16.STL" />
+    <mesh name="base_link_c17" file="../meshes/convex/base_link_c17.STL" />
+    <mesh name="base_link_c18" file="../meshes/convex/base_link_c18.STL" />
+    <mesh name="base_link_c19" file="../meshes/convex/base_link_c19.STL" />
+    <mesh name="base_link_c20" file="../meshes/convex/base_link_c20.STL" />
+    <mesh name="base_link_c21" file="../meshes/convex/base_link_c21.STL" />
+    <mesh name="base_link_c22" file="../meshes/convex/base_link_c22.STL" />
+    <mesh name="base_link_c23" file="../meshes/convex/base_link_c23.STL" />
+    <mesh name="base_link_c24" file="../meshes/convex/base_link_c24.STL" />
+    <mesh name="base_link_c25" file="../meshes/convex/base_link_c25.STL" />
+    <mesh name="base_link_c26" file="../meshes/convex/base_link_c26.STL" />
+    <mesh name="base_link_c27" file="../meshes/convex/base_link_c27.STL" />
+    <mesh name="base_link_c28" file="../meshes/convex/base_link_c28.STL" />
+    <mesh name="base_link_c29" file="../meshes/convex/base_link_c29.STL" />
+    <mesh name="base_link_c30" file="../meshes/convex/base_link_c30.STL" />
+    <mesh name="base_link_c31" file="../meshes/convex/base_link_c31.STL" />
+    <mesh name="base_link_c32" file="../meshes/convex/base_link_c32.STL" />
+    <mesh name="base_link_c33" file="../meshes/convex/base_link_c33.STL" />
+    <mesh name="base_link_c34" file="../meshes/convex/base_link_c34.STL" />
+    <mesh name="base_link_c35" file="../meshes/convex/base_link_c35.STL" />
+    <mesh name="base_link_c36" file="../meshes/convex/base_link_c36.STL" />
+    <mesh name="base_link_c37" file="../meshes/convex/base_link_c37.STL" />
+    <mesh name="base_link_c38" file="../meshes/convex/base_link_c38.STL" />
+    <mesh name="base_link_c39" file="../meshes/convex/base_link_c39.STL" />
+    <mesh name="base_link_c40" file="../meshes/convex/base_link_c40.STL" />
+    <mesh name="base_link_c41" file="../meshes/convex/base_link_c41.STL" />
+    <mesh name="base_link_c42" file="../meshes/convex/base_link_c42.STL" />
+    <mesh name="base_link_c43" file="../meshes/convex/base_link_c43.STL" />
+    <mesh name="base_link_c44" file="../meshes/convex/base_link_c44.STL" />
+    <mesh name="base_link_c45" file="../meshes/convex/base_link_c45.STL" />
+    <mesh name="base_link_c46" file="../meshes/convex/base_link_c46.STL" />
+    <mesh name="base_link_c47" file="../meshes/convex/base_link_c47.STL" />
+    <mesh name="base_link_c48" file="../meshes/convex/base_link_c48.STL" />
+    <mesh name="base_link_c49" file="../meshes/convex/base_link_c49.STL" />
+    <mesh name="base_link_c50" file="../meshes/convex/base_link_c50.STL" />
+    <mesh name="base_link_c51" file="../meshes/convex/base_link_c51.STL" />
+    <mesh name="base_link_c52" file="../meshes/convex/base_link_c52.STL" />
+    <mesh name="base_link_c53" file="../meshes/convex/base_link_c53.STL" />
+    <mesh name="base_link_c54" file="../meshes/convex/base_link_c54.STL" />
+    <mesh name="base_link_c55" file="../meshes/convex/base_link_c55.STL" />
+    <mesh name="base_link_c56" file="../meshes/convex/base_link_c56.STL" />
+    <mesh name="base_link_c57" file="../meshes/convex/base_link_c57.STL" />
+    <mesh name="base_link_c58" file="../meshes/convex/base_link_c58.STL" />
+    <mesh name="base_link_c59" file="../meshes/convex/base_link_c59.STL" />
+    <mesh name="base_link_c60" file="../meshes/convex/base_link_c60.STL" />
+    <mesh name="base_link_c61" file="../meshes/convex/base_link_c61.STL" />
+    <mesh name="base_link_c62" file="../meshes/convex/base_link_c62.STL" />
+    <mesh name="base_link_c63" file="../meshes/convex/base_link_c63.STL" />
+    <mesh name="base_link_c64" file="../meshes/convex/base_link_c64.STL" />
+    <mesh name="base_link_c65" file="../meshes/convex/base_link_c65.STL" />
+    <mesh name="base_link_c66" file="../meshes/convex/base_link_c66.STL" />
+    <mesh name="base_link_c67" file="../meshes/convex/base_link_c67.STL" />
+    <mesh name="base_link_c68" file="../meshes/convex/base_link_c68.STL" />
+    <mesh name="base_link_c69" file="../meshes/convex/base_link_c69.STL" />
+    <mesh name="base_link_c70" file="../meshes/convex/base_link_c70.STL" />
+    <mesh name="base_link_c71" file="../meshes/convex/base_link_c71.STL" />
+    <mesh name="base_link_c72" file="../meshes/convex/base_link_c72.STL" />
+    <mesh name="base_link_c73" file="../meshes/convex/base_link_c73.STL" />
+    <mesh name="base_link_c74" file="../meshes/convex/base_link_c74.STL" />
+    <mesh name="base_link_c75" file="../meshes/convex/base_link_c75.STL" />
+    <mesh name="base_link_c76" file="../meshes/convex/base_link_c76.STL" />
+    <mesh name="base_link_c77" file="../meshes/convex/base_link_c77.STL" />
+    <mesh name="base_link_c78" file="../meshes/convex/base_link_c78.STL" />
+    <mesh name="base_link_c79" file="../meshes/convex/base_link_c79.STL" />
+    <mesh name="base_link_c80" file="../meshes/convex/base_link_c80.STL" />
+    <mesh name="base_link_c81" file="../meshes/convex/base_link_c81.STL" />
+    <mesh name="base_link_c82" file="../meshes/convex/base_link_c82.STL" />
+    <mesh name="base_link_c83" file="../meshes/convex/base_link_c83.STL" />
+    <mesh name="base_link_c84" file="../meshes/convex/base_link_c84.STL" />
+    <mesh name="base_link_c85" file="../meshes/convex/base_link_c85.STL" />
+    <mesh name="base_link_c86" file="../meshes/convex/base_link_c86.STL" />
+    <mesh name="base_link_c87" file="../meshes/convex/base_link_c87.STL" />
+    <mesh name="base_link_c88" file="../meshes/convex/base_link_c88.STL" />
+    <mesh name="base_link_c89" file="../meshes/convex/base_link_c89.STL" />
+    <mesh name="base_link_c90" file="../meshes/convex/base_link_c90.STL" />
+    <mesh name="base_link_c91" file="../meshes/convex/base_link_c91.STL" />
+    <mesh name="base_link_c92" file="../meshes/convex/base_link_c92.STL" />
+    <mesh name="base_link_c93" file="../meshes/convex/base_link_c93.STL" />
+    <mesh name="base_link_c94" file="../meshes/convex/base_link_c94.STL" />
+    <mesh name="base_link_c95" file="../meshes/convex/base_link_c95.STL" />
+    <mesh name="base_link_c96" file="../meshes/convex/base_link_c96.STL" />
+    <mesh name="base_link_c97" file="../meshes/convex/base_link_c97.STL" />
+    <mesh name="base_link_c98" file="../meshes/convex/base_link_c98.STL" />
+    <mesh name="base_link_c99" file="../meshes/convex/base_link_c99.STL" />
+    <mesh name="base_link_c100" file="../meshes/convex/base_link_c100.STL" />
+    <mesh name="base_link_c101" file="../meshes/convex/base_link_c101.STL" />
+    <mesh name="base_link_c102" file="../meshes/convex/base_link_c102.STL" />
+    <mesh name="base_link_c103" file="../meshes/convex/base_link_c103.STL" />
+    <mesh name="base_link_c104" file="../meshes/convex/base_link_c104.STL" />
+    <mesh name="base_link_c105" file="../meshes/convex/base_link_c105.STL" />
+    <mesh name="base_link_c106" file="../meshes/convex/base_link_c106.STL" />
+    <mesh name="base_link_c107" file="../meshes/convex/base_link_c107.STL" />
+    <mesh name="base_link_c108" file="../meshes/convex/base_link_c108.STL" />
+    <mesh name="base_link_c109" file="../meshes/convex/base_link_c109.STL" />
+    <mesh name="base_link_c110" file="../meshes/convex/base_link_c110.STL" />
+    <mesh name="base_link_c111" file="../meshes/convex/base_link_c111.STL" />
+    <mesh name="base_link_c112" file="../meshes/convex/base_link_c112.STL" />
+    <mesh name="base_link_c113" file="../meshes/convex/base_link_c113.STL" />
+    <mesh name="base_link_c114" file="../meshes/convex/base_link_c114.STL" />
+    <mesh name="base_link_c115" file="../meshes/convex/base_link_c115.STL" />
+    <mesh name="base_link_c116" file="../meshes/convex/base_link_c116.STL" />
+    <mesh name="base_link_c117" file="../meshes/convex/base_link_c117.STL" />
+    <mesh name="base_link_c118" file="../meshes/convex/base_link_c118.STL" />
+    <mesh name="base_link_c119" file="../meshes/convex/base_link_c119.STL" />
+    <mesh name="base_link_c120" file="../meshes/convex/base_link_c120.STL" />
+    <mesh name="base_link_c121" file="../meshes/convex/base_link_c121.STL" />
+    <mesh name="base_link_c122" file="../meshes/convex/base_link_c122.STL" />
+    <mesh name="base_link_c123" file="../meshes/convex/base_link_c123.STL" />
+    <mesh name="base_link_c124" file="../meshes/convex/base_link_c124.STL" />
+    <mesh name="base_link_c125" file="../meshes/convex/base_link_c125.STL" />
+    <mesh name="base_link_c126" file="../meshes/convex/base_link_c126.STL" />
+    <mesh name="base_link_c127" file="../meshes/convex/base_link_c127.STL" />
+    <mesh name="base_link_c128" file="../meshes/convex/base_link_c128.STL" />
+    <mesh name="base_link_c129" file="../meshes/convex/base_link_c129.STL" />
+    <mesh name="base_link_c130" file="../meshes/convex/base_link_c130.STL" />
+    <mesh name="base_link_c131" file="../meshes/convex/base_link_c131.STL" />
+    <mesh name="base_link_c132" file="../meshes/convex/base_link_c132.STL" />
+    <mesh name="base_link_c133" file="../meshes/convex/base_link_c133.STL" />
+    <mesh name="base_link_c134" file="../meshes/convex/base_link_c134.STL" />
+    <mesh name="base_link_c135" file="../meshes/convex/base_link_c135.STL" />
+    <mesh name="base_link_c136" file="../meshes/convex/base_link_c136.STL" />
+    <mesh name="base_link_c137" file="../meshes/convex/base_link_c137.STL" />
+    <mesh name="base_link_c138" file="../meshes/convex/base_link_c138.STL" />
+    <mesh name="base_link_c139" file="../meshes/convex/base_link_c139.STL" />
+    <mesh name="base_link_c140" file="../meshes/convex/base_link_c140.STL" />
+    <mesh name="base_link_c141" file="../meshes/convex/base_link_c141.STL" />
+    <mesh name="base_link_c142" file="../meshes/convex/base_link_c142.STL" />
+    <mesh name="base_link_c143" file="../meshes/convex/base_link_c143.STL" />
+    <mesh name="base_link_c144" file="../meshes/convex/base_link_c144.STL" />
+    <mesh name="base_link_c145" file="../meshes/convex/base_link_c145.STL" />
+    <mesh name="base_link_c146" file="../meshes/convex/base_link_c146.STL" />
+    <mesh name="base_link_c147" file="../meshes/convex/base_link_c147.STL" />
+    <mesh name="base_link_c148" file="../meshes/convex/base_link_c148.STL" />
+    <mesh name="base_link_c149" file="../meshes/convex/base_link_c149.STL" />
+    <mesh name="base_link_c150" file="../meshes/convex/base_link_c150.STL" />
+    <mesh name="base_link_c151" file="../meshes/convex/base_link_c151.STL" />
+    <mesh name="base_link_c152" file="../meshes/convex/base_link_c152.STL" />
+    <mesh name="base_link_c153" file="../meshes/convex/base_link_c153.STL" />
+    <mesh name="base_link_c154" file="../meshes/convex/base_link_c154.STL" />
+    <mesh name="base_link_c155" file="../meshes/convex/base_link_c155.STL" />
+    <mesh name="base_link_c156" file="../meshes/convex/base_link_c156.STL" />
+    <mesh name="base_link_c157" file="../meshes/convex/base_link_c157.STL" />
+    <mesh name="base_link_c158" file="../meshes/convex/base_link_c158.STL" />
+    <mesh name="base_link_c159" file="../meshes/convex/base_link_c159.STL" />
+    <mesh name="base_link_c160" file="../meshes/convex/base_link_c160.STL" />
+    <mesh name="base_link_c161" file="../meshes/convex/base_link_c161.STL" />
+    <mesh name="base_link_c162" file="../meshes/convex/base_link_c162.STL" />
+    <mesh name="base_link_c163" file="../meshes/convex/base_link_c163.STL" />
+    <mesh name="base_link_c164" file="../meshes/convex/base_link_c164.STL" />
+    <mesh name="base_link_c165" file="../meshes/convex/base_link_c165.STL" />
+    <mesh name="base_link_c166" file="../meshes/convex/base_link_c166.STL" />
+    <mesh name="base_link_c167" file="../meshes/convex/base_link_c167.STL" />
+    <mesh name="base_link_c168" file="../meshes/convex/base_link_c168.STL" />
+    <mesh name="base_link_c169" file="../meshes/convex/base_link_c169.STL" />
+    <mesh name="base_link_c170" file="../meshes/convex/base_link_c170.STL" />
+    <mesh name="base_link_c171" file="../meshes/convex/base_link_c171.STL" />
+    <mesh name="base_link_c172" file="../meshes/convex/base_link_c172.STL" />
+    <mesh name="base_link_c173" file="../meshes/convex/base_link_c173.STL" />
+    <mesh name="base_link_c174" file="../meshes/convex/base_link_c174.STL" />
+    <mesh name="base_link_c175" file="../meshes/convex/base_link_c175.STL" />
+    <mesh name="base_link_c176" file="../meshes/convex/base_link_c176.STL" />
+    <mesh name="base_link_c177" file="../meshes/convex/base_link_c177.STL" />
+    <mesh name="base_link_c178" file="../meshes/convex/base_link_c178.STL" />
+    <mesh name="base_link_c179" file="../meshes/convex/base_link_c179.STL" />
+    <mesh name="base_link_c180" file="../meshes/convex/base_link_c180.STL" />
+    <mesh name="base_link_c181" file="../meshes/convex/base_link_c181.STL" />
+    <mesh name="base_link_c182" file="../meshes/convex/base_link_c182.STL" />
+    <mesh name="base_link_c183" file="../meshes/convex/base_link_c183.STL" />
+    <mesh name="base_link_c184" file="../meshes/convex/base_link_c184.STL" />
+    <mesh name="base_link_c185" file="../meshes/convex/base_link_c185.STL" />
+    <mesh name="base_link_c186" file="../meshes/convex/base_link_c186.STL" />
+    <mesh name="base_link_c187" file="../meshes/convex/base_link_c187.STL" />
+    <mesh name="base_link_c188" file="../meshes/convex/base_link_c188.STL" />
+    <mesh name="base_link_c189" file="../meshes/convex/base_link_c189.STL" />
+    <mesh name="base_link_c190" file="../meshes/convex/base_link_c190.STL" />
+    <mesh name="base_link_c191" file="../meshes/convex/base_link_c191.STL" />
+    <mesh name="base_link_c192" file="../meshes/convex/base_link_c192.STL" />
+    <mesh name="base_link_c193" file="../meshes/convex/base_link_c193.STL" />
+    <mesh name="base_link_c194" file="../meshes/convex/base_link_c194.STL" />
+    <mesh name="base_link_c195" file="../meshes/convex/base_link_c195.STL" />
+    <mesh name="base_link_c196" file="../meshes/convex/base_link_c196.STL" />
+    <mesh name="base_link_c197" file="../meshes/convex/base_link_c197.STL" />
+    <mesh name="base_link_c198" file="../meshes/convex/base_link_c198.STL" />
+    <mesh name="base_link_c199" file="../meshes/convex/base_link_c199.STL" />
+    <mesh name="base_link_c200" file="../meshes/convex/base_link_c200.STL" />
+    <mesh name="base_link_c201" file="../meshes/convex/base_link_c201.STL" />
+    <mesh name="base_link_c202" file="../meshes/convex/base_link_c202.STL" />
+    <mesh name="base_link_c203" file="../meshes/convex/base_link_c203.STL" />
+    <mesh name="base_link_c204" file="../meshes/convex/base_link_c204.STL" />
+    <mesh name="base_link_c205" file="../meshes/convex/base_link_c205.STL" />
+    <mesh name="base_link_c206" file="../meshes/convex/base_link_c206.STL" />
+    <mesh name="base_link_c207" file="../meshes/convex/base_link_c207.STL" />
+    <mesh name="base_link_c208" file="../meshes/convex/base_link_c208.STL" />
+    <mesh name="base_link_c209" file="../meshes/convex/base_link_c209.STL" />
+    <mesh name="base_link_c210" file="../meshes/convex/base_link_c210.STL" />
+    <mesh name="base_link_c211" file="../meshes/convex/base_link_c211.STL" />
+    <mesh name="base_link_c212" file="../meshes/convex/base_link_c212.STL" />
+    <mesh name="base_link_c213" file="../meshes/convex/base_link_c213.STL" />
+    <mesh name="base_link_c214" file="../meshes/convex/base_link_c214.STL" />
+    <mesh name="base_link_c215" file="../meshes/convex/base_link_c215.STL" />
+    <mesh name="base_link_c216" file="../meshes/convex/base_link_c216.STL" />
+    <mesh name="base_link_c217" file="../meshes/convex/base_link_c217.STL" />
+    <mesh name="base_link_c218" file="../meshes/convex/base_link_c218.STL" />
+    <mesh name="base_link_c219" file="../meshes/convex/base_link_c219.STL" />
+    <mesh name="base_link_c220" file="../meshes/convex/base_link_c220.STL" />
+    <mesh name="base_link_c221" file="../meshes/convex/base_link_c221.STL" />
+    <mesh name="base_link_c222" file="../meshes/convex/base_link_c222.STL" />
+    <mesh name="base_link_c223" file="../meshes/convex/base_link_c223.STL" />
+    <mesh name="base_link_c224" file="../meshes/convex/base_link_c224.STL" />
+    <mesh name="base_link_c225" file="../meshes/convex/base_link_c225.STL" />
+    <mesh name="base_link_c226" file="../meshes/convex/base_link_c226.STL" />
+    <mesh name="base_link_c227" file="../meshes/convex/base_link_c227.STL" />
+    <mesh name="base_link_c228" file="../meshes/convex/base_link_c228.STL" />
+    <mesh name="base_link_c229" file="../meshes/convex/base_link_c229.STL" />
+    <mesh name="base_link_c230" file="../meshes/convex/base_link_c230.STL" />
+    <mesh name="base_link_c231" file="../meshes/convex/base_link_c231.STL" />
+    <mesh name="base_link_c232" file="../meshes/convex/base_link_c232.STL" />
+    <mesh name="base_link_c233" file="../meshes/convex/base_link_c233.STL" />
+    <mesh name="base_link_c234" file="../meshes/convex/base_link_c234.STL" />
+    <mesh name="base_link_c235" file="../meshes/convex/base_link_c235.STL" />
+    <mesh name="base_link_c236" file="../meshes/convex/base_link_c236.STL" />
+    <mesh name="base_link_c237" file="../meshes/convex/base_link_c237.STL" />
+    <mesh name="base_link_c238" file="../meshes/convex/base_link_c238.STL" />
+    <mesh name="base_link_c239" file="../meshes/convex/base_link_c239.STL" />
+    <mesh name="base_link_c240" file="../meshes/convex/base_link_c240.STL" />
+    <mesh name="base_link_c241" file="../meshes/convex/base_link_c241.STL" />
+    <mesh name="base_link_c242" file="../meshes/convex/base_link_c242.STL" />
+    <mesh name="base_link_c243" file="../meshes/convex/base_link_c243.STL" />
+    <mesh name="base_link_c244" file="../meshes/convex/base_link_c244.STL" />
+    <mesh name="base_link_c245" file="../meshes/convex/base_link_c245.STL" />
+    <mesh name="base_link_c246" file="../meshes/convex/base_link_c246.STL" />
+    <mesh name="base_link_c247" file="../meshes/convex/base_link_c247.STL" />
+    <mesh name="Left_front_Link" file="../meshes/Left_front_Link.STL" />
+    <mesh name="Left_front_Link_c00" file="../meshes/convex/Left_front_Link_c00.STL" />
+    <mesh name="Left_front_Link_c01" file="../meshes/convex/Left_front_Link_c01.STL" />
+    <mesh name="Left_front_Link_c02" file="../meshes/convex/Left_front_Link_c02.STL" />
+    <mesh name="Left_front_Link_c03" file="../meshes/convex/Left_front_Link_c03.STL" />
+    <mesh name="Left_front_Link_c04" file="../meshes/convex/Left_front_Link_c04.STL" />
+    <mesh name="Left_front_Link_c05" file="../meshes/convex/Left_front_Link_c05.STL" />
+    <mesh name="Left_front_Link_c06" file="../meshes/convex/Left_front_Link_c06.STL" />
+    <mesh name="Left_front_Link_c07" file="../meshes/convex/Left_front_Link_c07.STL" />
+    <mesh name="Left_front_Link_c08" file="../meshes/convex/Left_front_Link_c08.STL" />
+    <mesh name="Left_front_Link_c09" file="../meshes/convex/Left_front_Link_c09.STL" />
+    <mesh name="Left_front_Link_c10" file="../meshes/convex/Left_front_Link_c10.STL" />
+    <mesh name="Left_front_Link_c11" file="../meshes/convex/Left_front_Link_c11.STL" />
+    <mesh name="Left_front_Link_c12" file="../meshes/convex/Left_front_Link_c12.STL" />
+    <mesh name="Left_front_Link_c13" file="../meshes/convex/Left_front_Link_c13.STL" />
+    <mesh name="Left_front_Link_c14" file="../meshes/convex/Left_front_Link_c14.STL" />
+    <mesh name="Left_front_Link_c15" file="../meshes/convex/Left_front_Link_c15.STL" />
+    <mesh name="Left_front_Link_c16" file="../meshes/convex/Left_front_Link_c16.STL" />
+    <mesh name="Left_front_Link_c17" file="../meshes/convex/Left_front_Link_c17.STL" />
+    <mesh name="Left_front_Link_c18" file="../meshes/convex/Left_front_Link_c18.STL" />
+    <mesh name="Left_front_Link_c19" file="../meshes/convex/Left_front_Link_c19.STL" />
+    <mesh name="Left_front_Link_c20" file="../meshes/convex/Left_front_Link_c20.STL" />
+    <mesh name="Left_front_Link_c21" file="../meshes/convex/Left_front_Link_c21.STL" />
+    <mesh name="Left_front_Link_c22" file="../meshes/convex/Left_front_Link_c22.STL" />
+    <mesh name="Left_front_Link_c23" file="../meshes/convex/Left_front_Link_c23.STL" />
+    <mesh name="Left_front_Link_c24" file="../meshes/convex/Left_front_Link_c24.STL" />
+    <mesh name="Left_front_Link_c25" file="../meshes/convex/Left_front_Link_c25.STL" />
+    <mesh name="Left_front_Link_c26" file="../meshes/convex/Left_front_Link_c26.STL" />
+    <mesh name="Left_front_Link_c27" file="../meshes/convex/Left_front_Link_c27.STL" />
+    <mesh name="Left_front_Link_c28" file="../meshes/convex/Left_front_Link_c28.STL" />
+    <mesh name="Left_front_Link_c29" file="../meshes/convex/Left_front_Link_c29.STL" />
+    <mesh name="Left_front_Link_c30" file="../meshes/convex/Left_front_Link_c30.STL" />
+    <mesh name="Left_front_Link_c31" file="../meshes/convex/Left_front_Link_c31.STL" />
+    <mesh name="Left_front_Link_c32" file="../meshes/convex/Left_front_Link_c32.STL" />
+    <mesh name="Left_front_Link_c33" file="../meshes/convex/Left_front_Link_c33.STL" />
+    <mesh name="Left_front_Link_c34" file="../meshes/convex/Left_front_Link_c34.STL" />
+    <mesh name="Left_front_Link_c35" file="../meshes/convex/Left_front_Link_c35.STL" />
+    <mesh name="Left_front_child1_Link" file="../meshes/Left_front_child1_Link.STL" />
+    <mesh name="Left_front_child1_Link_c00" file="../meshes/convex/Left_front_child1_Link_c00.STL" />
+    <mesh name="Left_front_child1_Link_c01" file="../meshes/convex/Left_front_child1_Link_c01.STL" />
+    <mesh name="Left_front_child1_Link_c02" file="../meshes/convex/Left_front_child1_Link_c02.STL" />
+    <mesh name="Left_front_child1_Link_c03" file="../meshes/convex/Left_front_child1_Link_c03.STL" />
+    <mesh name="Left_front_child1_Link_c04" file="../meshes/convex/Left_front_child1_Link_c04.STL" />
+    <mesh name="Left_front_child1_Link_c05" file="../meshes/convex/Left_front_child1_Link_c05.STL" />
+    <mesh name="Left_front_child2_Link" file="../meshes/Left_front_child2_Link.STL" />
+    <mesh name="Left_front_child2_Link_c00" file="../meshes/convex/Left_front_child2_Link_c00.STL" />
+    <mesh name="Left_front_child3_Link" file="../meshes/Left_front_child3_Link.STL" />
+    <mesh name="Left_front_child3_Link_c00" file="../meshes/convex/Left_front_child3_Link_c00.STL" />
+    <mesh name="Left_front_child3_Link_c01" file="../meshes/convex/Left_front_child3_Link_c01.STL" />
+    <mesh name="Left_front_child3_Link_c02" file="../meshes/convex/Left_front_child3_Link_c02.STL" />
+    <mesh name="Left_front_child3_Link_c03" file="../meshes/convex/Left_front_child3_Link_c03.STL" />
+    <mesh name="Left_front_child3_Link_c04" file="../meshes/convex/Left_front_child3_Link_c04.STL" />
+    <mesh name="Left_rear_Link" file="../meshes/Left_rear_Link.STL" />
+    <mesh name="Left_rear_Link_c00" file="../meshes/convex/Left_rear_Link_c00.STL" />
+    <mesh name="Left_rear_Link_c01" file="../meshes/convex/Left_rear_Link_c01.STL" />
+    <mesh name="Left_rear_Link_c02" file="../meshes/convex/Left_rear_Link_c02.STL" />
+    <mesh name="Left_rear_Link_c03" file="../meshes/convex/Left_rear_Link_c03.STL" />
+    <mesh name="Left_rear_Link_c04" file="../meshes/convex/Left_rear_Link_c04.STL" />
+    <mesh name="Left_rear_Link_c05" file="../meshes/convex/Left_rear_Link_c05.STL" />
+    <mesh name="Left_rear_child1_link" file="../meshes/Left_rear_child1_link.STL" />
+    <mesh name="Left_rear_child1_link_c00" file="../meshes/convex/Left_rear_child1_link_c00.STL" />
+    <mesh name="Left_rear_child1_link_c01" file="../meshes/convex/Left_rear_child1_link_c01.STL" />
+    <mesh name="Left_rear_child1_link_c02" file="../meshes/convex/Left_rear_child1_link_c02.STL" />
+    <mesh name="Left_rear_child1_link_c03" file="../meshes/convex/Left_rear_child1_link_c03.STL" />
+    <mesh name="Left_rear_child1_link_c04" file="../meshes/convex/Left_rear_child1_link_c04.STL" />
+    <mesh name="Left_rear_child1_link_c05" file="../meshes/convex/Left_rear_child1_link_c05.STL" />
+    <mesh name="Left_rear_child1_link_c06" file="../meshes/convex/Left_rear_child1_link_c06.STL" />
+    <mesh name="Left_rear_child1_link_c07" file="../meshes/convex/Left_rear_child1_link_c07.STL" />
+    <mesh name="Left_wheel_link" file="../meshes/Left_wheel_link.STL" />
+    <mesh name="Right_front_Link" file="../meshes/Right_front_Link.STL" />
+    <mesh name="Right_front_Link_c00" file="../meshes/convex/Right_front_Link_c00.STL" />
+    <mesh name="Right_front_Link_c01" file="../meshes/convex/Right_front_Link_c01.STL" />
+    <mesh name="Right_front_Link_c02" file="../meshes/convex/Right_front_Link_c02.STL" />
+    <mesh name="Right_front_Link_c03" file="../meshes/convex/Right_front_Link_c03.STL" />
+    <mesh name="Right_front_Link_c04" file="../meshes/convex/Right_front_Link_c04.STL" />
+    <mesh name="Right_front_Link_c05" file="../meshes/convex/Right_front_Link_c05.STL" />
+    <mesh name="Right_front_Link_c06" file="../meshes/convex/Right_front_Link_c06.STL" />
+    <mesh name="Right_front_Link_c07" file="../meshes/convex/Right_front_Link_c07.STL" />
+    <mesh name="Right_front_Link_c08" file="../meshes/convex/Right_front_Link_c08.STL" />
+    <mesh name="Right_front_Link_c09" file="../meshes/convex/Right_front_Link_c09.STL" />
+    <mesh name="Right_front_Link_c10" file="../meshes/convex/Right_front_Link_c10.STL" />
+    <mesh name="Right_front_Link_c11" file="../meshes/convex/Right_front_Link_c11.STL" />
+    <mesh name="Right_front_Link_c12" file="../meshes/convex/Right_front_Link_c12.STL" />
+    <mesh name="Right_front_Link_c13" file="../meshes/convex/Right_front_Link_c13.STL" />
+    <mesh name="Right_front_Link_c14" file="../meshes/convex/Right_front_Link_c14.STL" />
+    <mesh name="Right_front_Link_c15" file="../meshes/convex/Right_front_Link_c15.STL" />
+    <mesh name="Right_front_Link_c16" file="../meshes/convex/Right_front_Link_c16.STL" />
+    <mesh name="Right_front_Link_c17" file="../meshes/convex/Right_front_Link_c17.STL" />
+    <mesh name="Right_front_Link_c18" file="../meshes/convex/Right_front_Link_c18.STL" />
+    <mesh name="Right_front_Link_c19" file="../meshes/convex/Right_front_Link_c19.STL" />
+    <mesh name="Right_front_Link_c20" file="../meshes/convex/Right_front_Link_c20.STL" />
+    <mesh name="Right_front_Link_c21" file="../meshes/convex/Right_front_Link_c21.STL" />
+    <mesh name="Right_front_Link_c22" file="../meshes/convex/Right_front_Link_c22.STL" />
+    <mesh name="Right_front_Link_c23" file="../meshes/convex/Right_front_Link_c23.STL" />
+    <mesh name="Right_front_Link_c24" file="../meshes/convex/Right_front_Link_c24.STL" />
+    <mesh name="Right_front_Link_c25" file="../meshes/convex/Right_front_Link_c25.STL" />
+    <mesh name="Right_front_Link_c26" file="../meshes/convex/Right_front_Link_c26.STL" />
+    <mesh name="Right_front_Link_c27" file="../meshes/convex/Right_front_Link_c27.STL" />
+    <mesh name="Right_front_Link_c28" file="../meshes/convex/Right_front_Link_c28.STL" />
+    <mesh name="Right_front_Link_c29" file="../meshes/convex/Right_front_Link_c29.STL" />
+    <mesh name="Right_front_Link_c30" file="../meshes/convex/Right_front_Link_c30.STL" />
+    <mesh name="Right_front_Link_c31" file="../meshes/convex/Right_front_Link_c31.STL" />
+    <mesh name="Right_front_Link_c32" file="../meshes/convex/Right_front_Link_c32.STL" />
+    <mesh name="Right_front_Link_c33" file="../meshes/convex/Right_front_Link_c33.STL" />
+    <mesh name="Right_front_Link_c34" file="../meshes/convex/Right_front_Link_c34.STL" />
+    <mesh name="Right_front_child1_Link" file="../meshes/Right_front_child1_Link.STL" />
+    <mesh name="Right_front_child1_Link_c00" file="../meshes/convex/Right_front_child1_Link_c00.STL" />
+    <mesh name="Right_front_child1_Link_c01" file="../meshes/convex/Right_front_child1_Link_c01.STL" />
+    <mesh name="Right_front_child1_Link_c02" file="../meshes/convex/Right_front_child1_Link_c02.STL" />
+    <mesh name="Right_front_child1_Link_c03" file="../meshes/convex/Right_front_child1_Link_c03.STL" />
+    <mesh name="Right_front_child1_Link_c04" file="../meshes/convex/Right_front_child1_Link_c04.STL" />
+    <mesh name="Right_front_child1_Link_c05" file="../meshes/convex/Right_front_child1_Link_c05.STL" />
+    <mesh name="Right_front_child2_Link" file="../meshes/Right_front_child2_Link.STL" />
+    <mesh name="Right_front_child2_Link_c00" file="../meshes/convex/Right_front_child2_Link_c00.STL" />
+    <mesh name="Right_front_child3_Link" file="../meshes/Right_front_child3_Link.STL" />
+    <mesh name="Right_front_child3_Link_c00" file="../meshes/convex/Right_front_child3_Link_c00.STL" />
+    <mesh name="Right_front_child3_Link_c01" file="../meshes/convex/Right_front_child3_Link_c01.STL" />
+    <mesh name="Right_front_child3_Link_c02" file="../meshes/convex/Right_front_child3_Link_c02.STL" />
+    <mesh name="Right_front_child3_Link_c03" file="../meshes/convex/Right_front_child3_Link_c03.STL" />
+    <mesh name="Right_front_child3_Link_c04" file="../meshes/convex/Right_front_child3_Link_c04.STL" />
+    <mesh name="Right_rear_Link" file="../meshes/Right_rear_Link.STL" />
+    <mesh name="Right_rear_Link_c00" file="../meshes/convex/Right_rear_Link_c00.STL" />
+    <mesh name="Right_rear_Link_c01" file="../meshes/convex/Right_rear_Link_c01.STL" />
+    <mesh name="Right_rear_Link_c02" file="../meshes/convex/Right_rear_Link_c02.STL" />
+    <mesh name="Right_rear_Link_c03" file="../meshes/convex/Right_rear_Link_c03.STL" />
+    <mesh name="Right_rear_Link_c04" file="../meshes/convex/Right_rear_Link_c04.STL" />
+    <mesh name="Right_rear_Link_c05" file="../meshes/convex/Right_rear_Link_c05.STL" />
+    <mesh name="Right_rear_child1_Link" file="../meshes/Right_rear_child1_Link.STL" />
+    <mesh name="Right_rear_child1_Link_c00" file="../meshes/convex/Right_rear_child1_Link_c00.STL" />
+    <mesh name="Right_rear_child1_Link_c01" file="../meshes/convex/Right_rear_child1_Link_c01.STL" />
+    <mesh name="Right_rear_child1_Link_c02" file="../meshes/convex/Right_rear_child1_Link_c02.STL" />
+    <mesh name="Right_rear_child1_Link_c03" file="../meshes/convex/Right_rear_child1_Link_c03.STL" />
+    <mesh name="Right_rear_child1_Link_c04" file="../meshes/convex/Right_rear_child1_Link_c04.STL" />
+    <mesh name="Right_rear_child1_Link_c05" file="../meshes/convex/Right_rear_child1_Link_c05.STL" />
+    <mesh name="Right_rear_child1_Link_c06" file="../meshes/convex/Right_rear_child1_Link_c06.STL" />
+    <mesh name="Right_rear_child1_Link_c07" file="../meshes/convex/Right_rear_child1_Link_c07.STL" />
+    <mesh name="Right_rear_child1_Link_c08" file="../meshes/convex/Right_rear_child1_Link_c08.STL" />
+    <mesh name="Right_wheel_Link" file="../meshes/Right_wheel_Link.STL" />
+  </asset>
+  <worldbody>
+    <body name="base_link" pos="0 0 0.034425913">
+      <freejoint name="floating_base" />
+      <inertial pos="-0.0045811 0.0018795 0.089619" mass="11.5" fullinertia="0.22931022 0.13047157 0.30942934 -7.0721704e-05 -0.00045593203 -0.0005717279" />
+      <geom name="base_link_vis" type="mesh" mesh="base_link" pos="0 0 0" quat="0.50000001 -0.5 -0.49999999 0.5" contype="0" conaffinity="0" rgba="0.85 0.85 0.88 1" />
+      <geom name="base_link_c00_col" type="mesh" mesh="base_link_c00" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c01_col" type="mesh" mesh="base_link_c01" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c02_col" type="mesh" mesh="base_link_c02" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c03_col" type="mesh" mesh="base_link_c03" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c04_col" type="mesh" mesh="base_link_c04" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c05_col" type="mesh" mesh="base_link_c05" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c06_col" type="mesh" mesh="base_link_c06" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c07_col" type="mesh" mesh="base_link_c07" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c08_col" type="mesh" mesh="base_link_c08" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c09_col" type="mesh" mesh="base_link_c09" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c10_col" type="mesh" mesh="base_link_c10" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c11_col" type="mesh" mesh="base_link_c11" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c12_col" type="mesh" mesh="base_link_c12" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c13_col" type="mesh" mesh="base_link_c13" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c14_col" type="mesh" mesh="base_link_c14" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c15_col" type="mesh" mesh="base_link_c15" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c16_col" type="mesh" mesh="base_link_c16" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c17_col" type="mesh" mesh="base_link_c17" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c18_col" type="mesh" mesh="base_link_c18" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c19_col" type="mesh" mesh="base_link_c19" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c20_col" type="mesh" mesh="base_link_c20" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c21_col" type="mesh" mesh="base_link_c21" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c22_col" type="mesh" mesh="base_link_c22" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c23_col" type="mesh" mesh="base_link_c23" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c24_col" type="mesh" mesh="base_link_c24" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c25_col" type="mesh" mesh="base_link_c25" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c26_col" type="mesh" mesh="base_link_c26" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c27_col" type="mesh" mesh="base_link_c27" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c28_col" type="mesh" mesh="base_link_c28" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c29_col" type="mesh" mesh="base_link_c29" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c30_col" type="mesh" mesh="base_link_c30" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c31_col" type="mesh" mesh="base_link_c31" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c32_col" type="mesh" mesh="base_link_c32" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c33_col" type="mesh" mesh="base_link_c33" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c34_col" type="mesh" mesh="base_link_c34" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c35_col" type="mesh" mesh="base_link_c35" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c36_col" type="mesh" mesh="base_link_c36" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c37_col" type="mesh" mesh="base_link_c37" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c38_col" type="mesh" mesh="base_link_c38" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c39_col" type="mesh" mesh="base_link_c39" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c40_col" type="mesh" mesh="base_link_c40" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c41_col" type="mesh" mesh="base_link_c41" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c42_col" type="mesh" mesh="base_link_c42" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c43_col" type="mesh" mesh="base_link_c43" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c44_col" type="mesh" mesh="base_link_c44" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c45_col" type="mesh" mesh="base_link_c45" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c46_col" type="mesh" mesh="base_link_c46" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c47_col" type="mesh" mesh="base_link_c47" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c48_col" type="mesh" mesh="base_link_c48" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c49_col" type="mesh" mesh="base_link_c49" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c50_col" type="mesh" mesh="base_link_c50" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c51_col" type="mesh" mesh="base_link_c51" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c52_col" type="mesh" mesh="base_link_c52" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c53_col" type="mesh" mesh="base_link_c53" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c54_col" type="mesh" mesh="base_link_c54" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c55_col" type="mesh" mesh="base_link_c55" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c56_col" type="mesh" mesh="base_link_c56" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c57_col" type="mesh" mesh="base_link_c57" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c58_col" type="mesh" mesh="base_link_c58" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c59_col" type="mesh" mesh="base_link_c59" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c60_col" type="mesh" mesh="base_link_c60" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c61_col" type="mesh" mesh="base_link_c61" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c62_col" type="mesh" mesh="base_link_c62" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c63_col" type="mesh" mesh="base_link_c63" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c64_col" type="mesh" mesh="base_link_c64" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c65_col" type="mesh" mesh="base_link_c65" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c66_col" type="mesh" mesh="base_link_c66" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c67_col" type="mesh" mesh="base_link_c67" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c68_col" type="mesh" mesh="base_link_c68" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c69_col" type="mesh" mesh="base_link_c69" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c70_col" type="mesh" mesh="base_link_c70" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c71_col" type="mesh" mesh="base_link_c71" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c72_col" type="mesh" mesh="base_link_c72" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c73_col" type="mesh" mesh="base_link_c73" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c74_col" type="mesh" mesh="base_link_c74" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c75_col" type="mesh" mesh="base_link_c75" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c76_col" type="mesh" mesh="base_link_c76" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c77_col" type="mesh" mesh="base_link_c77" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c78_col" type="mesh" mesh="base_link_c78" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c79_col" type="mesh" mesh="base_link_c79" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c80_col" type="mesh" mesh="base_link_c80" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c81_col" type="mesh" mesh="base_link_c81" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c82_col" type="mesh" mesh="base_link_c82" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c83_col" type="mesh" mesh="base_link_c83" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c84_col" type="mesh" mesh="base_link_c84" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c85_col" type="mesh" mesh="base_link_c85" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c86_col" type="mesh" mesh="base_link_c86" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c87_col" type="mesh" mesh="base_link_c87" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c88_col" type="mesh" mesh="base_link_c88" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c89_col" type="mesh" mesh="base_link_c89" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c90_col" type="mesh" mesh="base_link_c90" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c91_col" type="mesh" mesh="base_link_c91" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c92_col" type="mesh" mesh="base_link_c92" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c93_col" type="mesh" mesh="base_link_c93" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c94_col" type="mesh" mesh="base_link_c94" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c95_col" type="mesh" mesh="base_link_c95" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c96_col" type="mesh" mesh="base_link_c96" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c97_col" type="mesh" mesh="base_link_c97" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c98_col" type="mesh" mesh="base_link_c98" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c99_col" type="mesh" mesh="base_link_c99" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c100_col" type="mesh" mesh="base_link_c100" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c101_col" type="mesh" mesh="base_link_c101" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c102_col" type="mesh" mesh="base_link_c102" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c103_col" type="mesh" mesh="base_link_c103" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c104_col" type="mesh" mesh="base_link_c104" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c105_col" type="mesh" mesh="base_link_c105" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c106_col" type="mesh" mesh="base_link_c106" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c107_col" type="mesh" mesh="base_link_c107" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c108_col" type="mesh" mesh="base_link_c108" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c109_col" type="mesh" mesh="base_link_c109" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c110_col" type="mesh" mesh="base_link_c110" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c111_col" type="mesh" mesh="base_link_c111" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c112_col" type="mesh" mesh="base_link_c112" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c113_col" type="mesh" mesh="base_link_c113" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c114_col" type="mesh" mesh="base_link_c114" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c115_col" type="mesh" mesh="base_link_c115" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c116_col" type="mesh" mesh="base_link_c116" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c117_col" type="mesh" mesh="base_link_c117" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c118_col" type="mesh" mesh="base_link_c118" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c119_col" type="mesh" mesh="base_link_c119" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c120_col" type="mesh" mesh="base_link_c120" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c121_col" type="mesh" mesh="base_link_c121" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c122_col" type="mesh" mesh="base_link_c122" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c123_col" type="mesh" mesh="base_link_c123" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c124_col" type="mesh" mesh="base_link_c124" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c125_col" type="mesh" mesh="base_link_c125" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c126_col" type="mesh" mesh="base_link_c126" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c127_col" type="mesh" mesh="base_link_c127" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c128_col" type="mesh" mesh="base_link_c128" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c129_col" type="mesh" mesh="base_link_c129" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c130_col" type="mesh" mesh="base_link_c130" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c131_col" type="mesh" mesh="base_link_c131" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c132_col" type="mesh" mesh="base_link_c132" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c133_col" type="mesh" mesh="base_link_c133" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c134_col" type="mesh" mesh="base_link_c134" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c135_col" type="mesh" mesh="base_link_c135" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c136_col" type="mesh" mesh="base_link_c136" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c137_col" type="mesh" mesh="base_link_c137" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c138_col" type="mesh" mesh="base_link_c138" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c139_col" type="mesh" mesh="base_link_c139" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c140_col" type="mesh" mesh="base_link_c140" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c141_col" type="mesh" mesh="base_link_c141" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c142_col" type="mesh" mesh="base_link_c142" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c143_col" type="mesh" mesh="base_link_c143" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c144_col" type="mesh" mesh="base_link_c144" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c145_col" type="mesh" mesh="base_link_c145" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c146_col" type="mesh" mesh="base_link_c146" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c147_col" type="mesh" mesh="base_link_c147" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c148_col" type="mesh" mesh="base_link_c148" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c149_col" type="mesh" mesh="base_link_c149" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c150_col" type="mesh" mesh="base_link_c150" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c151_col" type="mesh" mesh="base_link_c151" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c152_col" type="mesh" mesh="base_link_c152" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c153_col" type="mesh" mesh="base_link_c153" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c154_col" type="mesh" mesh="base_link_c154" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c155_col" type="mesh" mesh="base_link_c155" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c156_col" type="mesh" mesh="base_link_c156" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c157_col" type="mesh" mesh="base_link_c157" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c158_col" type="mesh" mesh="base_link_c158" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c159_col" type="mesh" mesh="base_link_c159" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c160_col" type="mesh" mesh="base_link_c160" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c161_col" type="mesh" mesh="base_link_c161" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c162_col" type="mesh" mesh="base_link_c162" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c163_col" type="mesh" mesh="base_link_c163" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c164_col" type="mesh" mesh="base_link_c164" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c165_col" type="mesh" mesh="base_link_c165" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c166_col" type="mesh" mesh="base_link_c166" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c167_col" type="mesh" mesh="base_link_c167" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c168_col" type="mesh" mesh="base_link_c168" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c169_col" type="mesh" mesh="base_link_c169" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c170_col" type="mesh" mesh="base_link_c170" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c171_col" type="mesh" mesh="base_link_c171" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c172_col" type="mesh" mesh="base_link_c172" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c173_col" type="mesh" mesh="base_link_c173" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c174_col" type="mesh" mesh="base_link_c174" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c175_col" type="mesh" mesh="base_link_c175" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c176_col" type="mesh" mesh="base_link_c176" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c177_col" type="mesh" mesh="base_link_c177" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c178_col" type="mesh" mesh="base_link_c178" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c179_col" type="mesh" mesh="base_link_c179" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c180_col" type="mesh" mesh="base_link_c180" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c181_col" type="mesh" mesh="base_link_c181" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c182_col" type="mesh" mesh="base_link_c182" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c183_col" type="mesh" mesh="base_link_c183" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c184_col" type="mesh" mesh="base_link_c184" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c185_col" type="mesh" mesh="base_link_c185" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c186_col" type="mesh" mesh="base_link_c186" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c187_col" type="mesh" mesh="base_link_c187" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c188_col" type="mesh" mesh="base_link_c188" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c189_col" type="mesh" mesh="base_link_c189" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c190_col" type="mesh" mesh="base_link_c190" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c191_col" type="mesh" mesh="base_link_c191" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c192_col" type="mesh" mesh="base_link_c192" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c193_col" type="mesh" mesh="base_link_c193" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c194_col" type="mesh" mesh="base_link_c194" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c195_col" type="mesh" mesh="base_link_c195" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c196_col" type="mesh" mesh="base_link_c196" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c197_col" type="mesh" mesh="base_link_c197" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c198_col" type="mesh" mesh="base_link_c198" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c199_col" type="mesh" mesh="base_link_c199" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c200_col" type="mesh" mesh="base_link_c200" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c201_col" type="mesh" mesh="base_link_c201" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c202_col" type="mesh" mesh="base_link_c202" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c203_col" type="mesh" mesh="base_link_c203" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c204_col" type="mesh" mesh="base_link_c204" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c205_col" type="mesh" mesh="base_link_c205" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c206_col" type="mesh" mesh="base_link_c206" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c207_col" type="mesh" mesh="base_link_c207" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c208_col" type="mesh" mesh="base_link_c208" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c209_col" type="mesh" mesh="base_link_c209" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c210_col" type="mesh" mesh="base_link_c210" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c211_col" type="mesh" mesh="base_link_c211" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c212_col" type="mesh" mesh="base_link_c212" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c213_col" type="mesh" mesh="base_link_c213" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c214_col" type="mesh" mesh="base_link_c214" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c215_col" type="mesh" mesh="base_link_c215" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c216_col" type="mesh" mesh="base_link_c216" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c217_col" type="mesh" mesh="base_link_c217" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c218_col" type="mesh" mesh="base_link_c218" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c219_col" type="mesh" mesh="base_link_c219" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c220_col" type="mesh" mesh="base_link_c220" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c221_col" type="mesh" mesh="base_link_c221" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c222_col" type="mesh" mesh="base_link_c222" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c223_col" type="mesh" mesh="base_link_c223" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c224_col" type="mesh" mesh="base_link_c224" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c225_col" type="mesh" mesh="base_link_c225" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c226_col" type="mesh" mesh="base_link_c226" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c227_col" type="mesh" mesh="base_link_c227" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c228_col" type="mesh" mesh="base_link_c228" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c229_col" type="mesh" mesh="base_link_c229" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c230_col" type="mesh" mesh="base_link_c230" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c231_col" type="mesh" mesh="base_link_c231" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c232_col" type="mesh" mesh="base_link_c232" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c233_col" type="mesh" mesh="base_link_c233" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c234_col" type="mesh" mesh="base_link_c234" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c235_col" type="mesh" mesh="base_link_c235" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c236_col" type="mesh" mesh="base_link_c236" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c237_col" type="mesh" mesh="base_link_c237" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c238_col" type="mesh" mesh="base_link_c238" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c239_col" type="mesh" mesh="base_link_c239" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c240_col" type="mesh" mesh="base_link_c240" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c241_col" type="mesh" mesh="base_link_c241" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c242_col" type="mesh" mesh="base_link_c242" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c243_col" type="mesh" mesh="base_link_c243" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c244_col" type="mesh" mesh="base_link_c244" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c245_col" type="mesh" mesh="base_link_c245" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c246_col" type="mesh" mesh="base_link_c246" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <geom name="base_link_c247_col" type="mesh" mesh="base_link_c247" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+      <body name="Left_front_Link" pos="-0.001951 0.18034 0.11508" quat="0.70710679 -0.70710677 0 0">
+        <joint name="Left_front_joint" axis="0 0 1" range="-6.28 6.28" actuatorfrcrange="-40 40" />
+        <inertial pos="-0.011742736 0.017072359 -0.020270063" mass="0.21686" fullinertia="0.00027171277 0.00019322958 0.00032131068 0.00010244343 4.0003618e-05 -5.8167684e-05" />
+        <geom name="Left_front_Link_vis" type="mesh" mesh="Left_front_Link" pos="0 0 0" quat="0.4654546 1.5389614e-13 3.2510499e-06 0.88507176" contype="0" conaffinity="0" rgba="0.90 0.92 0.93 1" />
+        <geom name="Left_front_Link_c00_col" type="mesh" mesh="Left_front_Link_c00" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c01_col" type="mesh" mesh="Left_front_Link_c01" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c02_col" type="mesh" mesh="Left_front_Link_c02" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c03_col" type="mesh" mesh="Left_front_Link_c03" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c04_col" type="mesh" mesh="Left_front_Link_c04" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c05_col" type="mesh" mesh="Left_front_Link_c05" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c06_col" type="mesh" mesh="Left_front_Link_c06" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c07_col" type="mesh" mesh="Left_front_Link_c07" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c08_col" type="mesh" mesh="Left_front_Link_c08" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c09_col" type="mesh" mesh="Left_front_Link_c09" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c10_col" type="mesh" mesh="Left_front_Link_c10" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c11_col" type="mesh" mesh="Left_front_Link_c11" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c12_col" type="mesh" mesh="Left_front_Link_c12" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c13_col" type="mesh" mesh="Left_front_Link_c13" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c14_col" type="mesh" mesh="Left_front_Link_c14" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c15_col" type="mesh" mesh="Left_front_Link_c15" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c16_col" type="mesh" mesh="Left_front_Link_c16" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c17_col" type="mesh" mesh="Left_front_Link_c17" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c18_col" type="mesh" mesh="Left_front_Link_c18" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c19_col" type="mesh" mesh="Left_front_Link_c19" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c20_col" type="mesh" mesh="Left_front_Link_c20" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c21_col" type="mesh" mesh="Left_front_Link_c21" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c22_col" type="mesh" mesh="Left_front_Link_c22" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c23_col" type="mesh" mesh="Left_front_Link_c23" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c24_col" type="mesh" mesh="Left_front_Link_c24" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c25_col" type="mesh" mesh="Left_front_Link_c25" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c26_col" type="mesh" mesh="Left_front_Link_c26" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c27_col" type="mesh" mesh="Left_front_Link_c27" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c28_col" type="mesh" mesh="Left_front_Link_c28" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c29_col" type="mesh" mesh="Left_front_Link_c29" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c30_col" type="mesh" mesh="Left_front_Link_c30" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c31_col" type="mesh" mesh="Left_front_Link_c31" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c32_col" type="mesh" mesh="Left_front_Link_c32" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c33_col" type="mesh" mesh="Left_front_Link_c33" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c34_col" type="mesh" mesh="Left_front_Link_c34" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_front_Link_c35_col" type="mesh" mesh="Left_front_Link_c35" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <body name="Left_front_child1_Link" pos="-0.056671807 0.082395555 -0.031081729" quat="1 0 0 0">
+          <joint name="Left_front_child1_joint" axis="0 0 1" range="-6.28 6.28" actuatorfrcrange="-40 40" />
+          <inertial pos="-0.051063234 -0.019254605 0.0048269411" mass="0.029932" fullinertia="7.3708969e-06 4.4880738e-05 5.1767001e-05 -1.6493502e-05 -2.6512231e-08 -1.0001065e-08" />
+          <geom name="Left_front_child1_Link_vis" type="mesh" mesh="Left_front_child1_Link" pos="-0.1105402 -0.041687568 1.1170141e-09" quat="1.4044903e-06 -0.89429274 -0.4474824 4.2923911e-06" contype="0" conaffinity="0" rgba="0.90 0.92 0.93 1" />
+          <geom name="Left_front_child1_Link_c00_col" type="mesh" mesh="Left_front_child1_Link_c00" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <geom name="Left_front_child1_Link_c01_col" type="mesh" mesh="Left_front_child1_Link_c01" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <geom name="Left_front_child1_Link_c02_col" type="mesh" mesh="Left_front_child1_Link_c02" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <geom name="Left_front_child1_Link_c03_col" type="mesh" mesh="Left_front_child1_Link_c03" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <geom name="Left_front_child1_Link_c04_col" type="mesh" mesh="Left_front_child1_Link_c04" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <geom name="Left_front_child1_Link_c05_col" type="mesh" mesh="Left_front_child1_Link_c05" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <body name="Left_front_child2_Link" pos="-0.11054008 -0.041687568 0.013238001" quat="1 0 0 0">
+            <joint name="Left_front_child2_joint" axis="0 0 1" range="-6.28 6.28" actuatorfrcrange="-40 40" />
+            <inertial pos="0.063596323 -0.065427111 0.002999522" mass="0.0288133994" fullinertia="3.9974874e-05 4.5753145e-05 8.5555139e-05 3.9810211e-05 3.522462e-10 -3.0086393e-10" />
+            <geom name="Left_front_child2_Link_vis" type="mesh" mesh="Left_front_child2_Link" pos="0 0 0" quat="9.6498327e-07 -0.9336578 -0.35816631 4.3997179e-06" contype="0" conaffinity="0" rgba="0.90 0.92 0.93 1" />
+            <geom name="Left_front_child2_Link_c00_col" type="mesh" mesh="Left_front_child2_Link_c00" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+            <site name="pin1_A" pos="0.079012912253 -0.087831933802 -0.0011235262209" size="0.005" rgba="1 0 0 1" />
+            <!-- 销轴1: Left_front_child2_Link <-> Left_rear_Link-->
+            <body name="Left_front_child3_Link" pos="0.13197817 -0.11602112 -0.013000044" quat="1 0 0 0">
+              <joint name="Left_front_child3_joint" axis="0 0 1" range="-6.28 6.28" actuatorfrcrange="-40 40" />
+              <inertial pos="-0.050713303 -0.027099888 0.0048101203" mass="0.0271962671" fullinertia="9.9515323e-06 3.2432844e-05 4.1941603e-05 -1.681345e-05 4.0349391e-10 2.2757393e-10" />
+              <geom name="Left_front_child3_Link_vis" type="mesh" mesh="Left_front_child3_Link" pos="-0.10142727 -0.054198752 1.45225e-09" quat="6.4941817e-07 -0.95600393 -0.29335386 4.4517859e-06" contype="0" conaffinity="0" rgba="0.90 0.92 0.93 1" />
+              <geom name="Left_front_child3_Link_c00_col" type="mesh" mesh="Left_front_child3_Link_c00" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+              <geom name="Left_front_child3_Link_c01_col" type="mesh" mesh="Left_front_child3_Link_c01" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+              <geom name="Left_front_child3_Link_c02_col" type="mesh" mesh="Left_front_child3_Link_c02" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+              <geom name="Left_front_child3_Link_c03_col" type="mesh" mesh="Left_front_child3_Link_c03" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+              <geom name="Left_front_child3_Link_c04_col" type="mesh" mesh="Left_front_child3_Link_c04" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+              <site name="pin2_A" pos="-0.10142797494 -0.054199352462 0.010726791877" size="0.005" rgba="1 0 0 1" />
+              <!-- 销轴2: Left_front_child3_Link <-> Left_rear_child1_link-->
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="Left_rear_Link" pos="-0.001951 0.1495 0.11508" quat="0.70710679 -0.70710677 0 0">
+        <joint name="Left_rear_joint" axis="0 0 1" range="-6.28 6.28" actuatorfrcrange="-40 40" />
+        <inertial pos="-0.082649629 -0.04592898 0.0066881214" mass="0.35601" fullinertia="0.0006897524 0.0017302006 0.0023650718 -0.00092559468 0.00011070844 7.11983e-05" />
+        <geom name="Left_rear_Link_vis" type="mesh" mesh="Left_rear_Link" pos="0 0 0" quat="1.8915766e-06 0.51416445 0.85769162 4.9125794e-09" contype="0" conaffinity="0" rgba="0.90 0.92 0.93 1" />
+        <geom name="Left_rear_Link_c00_col" type="mesh" mesh="Left_rear_Link_c00" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_rear_Link_c01_col" type="mesh" mesh="Left_rear_Link_c01" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_rear_Link_c02_col" type="mesh" mesh="Left_rear_Link_c02" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_rear_Link_c03_col" type="mesh" mesh="Left_rear_Link_c03" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_rear_Link_c04_col" type="mesh" mesh="Left_rear_Link_c04" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Left_rear_Link_c05_col" type="mesh" mesh="Left_rear_Link_c05" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <site name="pin1_B" pos="-0.088198979547 -0.047123945975 0.011872745779" size="0.005" rgba="1 0 0 1" />
+        <body name="Left_rear_child1_link" pos="-0.18962769 -0.101323 0.012999582" quat="1 0 0 0">
+          <joint name="Left_rear_child1_joint" axis="0 0 1" range="-6.28 6.28" actuatorfrcrange="-40 40" />
+          <inertial pos="-0.082577292 0.091896954 0.0054144866" mass="0.18694515" fullinertia="0.0010283775 0.00083013827 0.0018542578 0.00084550815 1.3855797e-06 -8.9577298e-07" />
+          <geom name="Left_rear_child1_link_vis" type="mesh" mesh="Left_rear_child1_link" pos="0 0 0" quat="1.5068911e-06 0.93365422 0.35817564 1.1722731e-06" contype="0" conaffinity="0" rgba="0.90 0.92 0.93 1" />
+          <geom name="Left_rear_child1_link_c00_col" type="mesh" mesh="Left_rear_child1_link_c00" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <geom name="Left_rear_child1_link_c01_col" type="mesh" mesh="Left_rear_child1_link_c01" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <geom name="Left_rear_child1_link_c02_col" type="mesh" mesh="Left_rear_child1_link_c02" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <geom name="Left_rear_child1_link_c03_col" type="mesh" mesh="Left_rear_child1_link_c03" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <geom name="Left_rear_child1_link_c04_col" type="mesh" mesh="Left_rear_child1_link_c04" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <geom name="Left_rear_child1_link_c05_col" type="mesh" mesh="Left_rear_child1_link_c05" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <geom name="Left_rear_child1_link_c06_col" type="mesh" mesh="Left_rear_child1_link_c06" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <geom name="Left_rear_child1_link_c07_col" type="mesh" mesh="Left_rear_child1_link_c07" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <site name="pin2_B" pos="0.052965992264 -0.028189482636 -0.0022765616235" size="0.005" rgba="1 0 0 1" />
+          <body name="Left_wheel_link" pos="-0.16988146 0.18882882 0.017549083" quat="1 0 0 0">
+            <joint name="Left_wheel_joint" axis="0 0 1" damping="0.01" />
+            <inertial pos="-2.2151281e-05 0.00010400674 0.0079508997" mass="0.5" fullinertia="0.00047304932 0.00047445356 0.00081435014 -3.9838048e-07 -1.9576435e-07 8.7986015e-07" />
+            <geom name="Left_wheel_link_vis" type="mesh" mesh="Left_wheel_link" pos="0 0 0" quat="1.2704508e-06 0.97885935 0.20453453 1.3846183e-06" contype="0" conaffinity="0" rgba="0.79 0.82 0.93 1" />
+            <geom name="Left_wheel_link_col" type="cylinder" size="0.0600001 0.0291751" pos="0 0 -0.0041748939" contype="1" conaffinity="1" group="3" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" rgba="0 0 0 0" />
+          </body>
+        </body>
+      </body>
+      <body name="Right_front_Link" pos="-0.001951 -0.18034 0.11508" quat="0.70710679 0.70710677 0 0">
+        <joint name="Right_front_joint" axis="0 0 1" range="-6.28 6.28" actuatorfrcrange="-40 40" />
+        <inertial pos="-0.011421292 -0.01660543 -0.020417939" mass="0.21603" fullinertia="0.0002688294 0.00019164598 0.00031750596 -0.00010074304 3.9452075e-05 5.7365326e-05" />
+        <geom name="Right_front_Link_vis" type="mesh" mesh="Right_front_Link" pos="0 0 0" quat="2.8731246e-10 0.4654546 -0.88507176 3.2505033e-06" contype="0" conaffinity="0" rgba="0.90 0.92 0.93 1" />
+        <geom name="Right_front_Link_c00_col" type="mesh" mesh="Right_front_Link_c00" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c01_col" type="mesh" mesh="Right_front_Link_c01" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c02_col" type="mesh" mesh="Right_front_Link_c02" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c03_col" type="mesh" mesh="Right_front_Link_c03" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c04_col" type="mesh" mesh="Right_front_Link_c04" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c05_col" type="mesh" mesh="Right_front_Link_c05" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c06_col" type="mesh" mesh="Right_front_Link_c06" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c07_col" type="mesh" mesh="Right_front_Link_c07" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c08_col" type="mesh" mesh="Right_front_Link_c08" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c09_col" type="mesh" mesh="Right_front_Link_c09" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c10_col" type="mesh" mesh="Right_front_Link_c10" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c11_col" type="mesh" mesh="Right_front_Link_c11" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c12_col" type="mesh" mesh="Right_front_Link_c12" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c13_col" type="mesh" mesh="Right_front_Link_c13" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c14_col" type="mesh" mesh="Right_front_Link_c14" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c15_col" type="mesh" mesh="Right_front_Link_c15" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c16_col" type="mesh" mesh="Right_front_Link_c16" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c17_col" type="mesh" mesh="Right_front_Link_c17" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c18_col" type="mesh" mesh="Right_front_Link_c18" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c19_col" type="mesh" mesh="Right_front_Link_c19" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c20_col" type="mesh" mesh="Right_front_Link_c20" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c21_col" type="mesh" mesh="Right_front_Link_c21" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c22_col" type="mesh" mesh="Right_front_Link_c22" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c23_col" type="mesh" mesh="Right_front_Link_c23" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c24_col" type="mesh" mesh="Right_front_Link_c24" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c25_col" type="mesh" mesh="Right_front_Link_c25" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c26_col" type="mesh" mesh="Right_front_Link_c26" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c27_col" type="mesh" mesh="Right_front_Link_c27" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c28_col" type="mesh" mesh="Right_front_Link_c28" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c29_col" type="mesh" mesh="Right_front_Link_c29" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c30_col" type="mesh" mesh="Right_front_Link_c30" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c31_col" type="mesh" mesh="Right_front_Link_c31" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c32_col" type="mesh" mesh="Right_front_Link_c32" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c33_col" type="mesh" mesh="Right_front_Link_c33" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_front_Link_c34_col" type="mesh" mesh="Right_front_Link_c34" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <body name="Right_front_child1_Link" pos="-0.056670323 -0.082392298 -0.026843697" quat="1 0 0 0">
+          <joint name="Right_front_child1_joint" axis="0 0 1" range="-6.28 6.28" actuatorfrcrange="-40 40" />
+          <inertial pos="-0.051062582 0.019255671 0.00056183495" mass="0.0299321559" fullinertia="7.3689431e-06 4.4882592e-05 5.1767282e-05 1.6491542e-05 -1.5521581e-08 5.8510575e-09" />
+          <geom name="Right_front_child1_Link_vis" type="mesh" mesh="Right_front_child1_Link" pos="0 0 0" quat="0.97123135 1.1332526e-06 -3.0296334e-06 -0.23813792" contype="0" conaffinity="0" rgba="0.90 0.92 0.93 1" />
+          <geom name="Right_front_child1_Link_c00_col" type="mesh" mesh="Right_front_child1_Link_c00" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <geom name="Right_front_child1_Link_c01_col" type="mesh" mesh="Right_front_child1_Link_c01" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <geom name="Right_front_child1_Link_c02_col" type="mesh" mesh="Right_front_child1_Link_c02" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <geom name="Right_front_child1_Link_c03_col" type="mesh" mesh="Right_front_child1_Link_c03" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <geom name="Right_front_child1_Link_c04_col" type="mesh" mesh="Right_front_child1_Link_c04" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <geom name="Right_front_child1_Link_c05_col" type="mesh" mesh="Right_front_child1_Link_c05" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <body name="Right_front_child2_Link" pos="-0.11054455 0.041687133 0.0089993214" quat="1 0 0 0">
+            <joint name="Right_front_child2_joint" axis="0 0 1" range="-6.28 6.28" actuatorfrcrange="-40 40" />
+            <inertial pos="0.063593006 0.065430293 0.0030004582" mass="0.0288133994" fullinertia="3.9979038e-05 4.5753068e-05 8.5559226e-05 -3.981333e-05 -3.2303148e-10 -2.8597577e-10" />
+            <geom name="Right_front_child2_Link_vis" type="mesh" mesh="Right_front_child2_Link" pos="0 0 0" quat="0.93366676 1.5045069e-06 -2.8634596e-06 -0.35814297" contype="0" conaffinity="0" rgba="0.90 0.92 0.93 1" />
+            <geom name="Right_front_child2_Link_c00_col" type="mesh" mesh="Right_front_child2_Link_c00" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+            <site name="pin3_A" pos="0.079012221851 0.087832521347 -0.0011224279203" size="0.005" rgba="1 0 0 1" />
+            <!-- 销轴3: Right_front_child2_Link <-> Right_rear_Link-->
+            <body name="Right_front_child3_Link" pos="0.13197241 0.11602772 -0.012999676" quat="1 0 0 0">
+              <joint name="Right_front_child3_joint" axis="0 0 1" range="-6.28 6.28" actuatorfrcrange="-40 40" />
+              <inertial pos="-0.050714575 0.027097349 0.0048109137" mass="0.0271962671" fullinertia="9.949851e-06 3.2434526e-05 4.1941603e-05 1.6812326e-05 -9.681152e-11 3.5783819e-11" />
+              <geom name="Right_front_child3_Link_vis" type="mesh" mesh="Right_front_child3_Link" pos="-0.10142982 0.054193675 1.4521139e-09" quat="0.95601126 1.3047775e-06 -2.9598138e-06 -0.29332996" contype="0" conaffinity="0" rgba="0.90 0.92 0.93 1" />
+              <geom name="Right_front_child3_Link_c00_col" type="mesh" mesh="Right_front_child3_Link_c00" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+              <geom name="Right_front_child3_Link_c01_col" type="mesh" mesh="Right_front_child3_Link_c01" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+              <geom name="Right_front_child3_Link_c02_col" type="mesh" mesh="Right_front_child3_Link_c02" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+              <geom name="Right_front_child3_Link_c03_col" type="mesh" mesh="Right_front_child3_Link_c03" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+              <geom name="Right_front_child3_Link_c04_col" type="mesh" mesh="Right_front_child3_Link_c04" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+              <site name="pin4_A" pos="-0.10142486431 0.054192151615 0.012477122425" size="0.005" rgba="1 0 0 1" />
+              <!-- 销轴4: Right_front_child3_Link <-> Right_rear_child1_Link-->
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="Right_rear_Link" pos="-0.001951 -0.1495 0.11508" quat="0.70710679 0.70710677 0 0">
+        <joint name="Right_rear_joint" axis="0 0 1" range="-6.28 6.28" actuatorfrcrange="-40 40" />
+        <inertial pos="-0.08281308 0.04507729 0.006587592" mass="0.353607887" fullinertia="0.00065487987 0.001764315 0.0023662081 0.00091842708 0.00011266675 -6.331089e-05" />
+        <geom name="Right_rear_Link_vis" type="mesh" mesh="Right_rear_Link" pos="0 0 0" quat="0.51416445 -1.8886315e-06 -1.8956905e-13 -0.85769162" contype="0" conaffinity="0" rgba="0.90 0.92 0.93 1" />
+        <geom name="Right_rear_Link_c00_col" type="mesh" mesh="Right_rear_Link_c00" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_rear_Link_c01_col" type="mesh" mesh="Right_rear_Link_c01" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_rear_Link_c02_col" type="mesh" mesh="Right_rear_Link_c02" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_rear_Link_c03_col" type="mesh" mesh="Right_rear_Link_c03" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_rear_Link_c04_col" type="mesh" mesh="Right_rear_Link_c04" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <geom name="Right_rear_Link_c05_col" type="mesh" mesh="Right_rear_Link_c05" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+        <site name="pin3_B" pos="-0.088202651149 0.047127355521 0.01187319648" size="0.005" rgba="1 0 0 1" />
+        <body name="Right_rear_child1_Link" pos="-0.18962761 0.10132305 0.013000418" quat="1 0 0 0">
+          <joint name="Right_rear_child1_joint" axis="0 0 1" range="-6.28 6.28" actuatorfrcrange="-40 40" />
+          <inertial pos="-0.08197858 -0.091366521 0.0054201682" mass="0.18777453" fullinertia="0.0010339077 0.00083564715 0.0018652814 -0.00085070061 1.367247e-06 8.7975467e-07" />
+          <geom name="Right_rear_child1_Link_vis" type="mesh" mesh="Right_rear_child1_Link" pos="0 0 0" quat="0.93365422 -1.4868368e-06 1.1645797e-06 -0.35817564" contype="0" conaffinity="0" rgba="0.90 0.92 0.93 1" />
+          <geom name="Right_rear_child1_Link_c00_col" type="mesh" mesh="Right_rear_child1_Link_c00" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <geom name="Right_rear_child1_Link_c01_col" type="mesh" mesh="Right_rear_child1_Link_c01" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <geom name="Right_rear_child1_Link_c02_col" type="mesh" mesh="Right_rear_child1_Link_c02" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <geom name="Right_rear_child1_Link_c03_col" type="mesh" mesh="Right_rear_child1_Link_c03" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <geom name="Right_rear_child1_Link_c04_col" type="mesh" mesh="Right_rear_child1_Link_c04" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <geom name="Right_rear_child1_Link_c05_col" type="mesh" mesh="Right_rear_child1_Link_c05" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <geom name="Right_rear_child1_Link_c06_col" type="mesh" mesh="Right_rear_child1_Link_c06" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <geom name="Right_rear_child1_Link_c07_col" type="mesh" mesh="Right_rear_child1_Link_c07" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <geom name="Right_rear_child1_Link_c08_col" type="mesh" mesh="Right_rear_child1_Link_c08" contype="1" conaffinity="1" group="3" rgba="0.2 0.85 0.35 0.15" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" />
+          <site name="pin4_B" pos="0.052960283688 0.028191650789 -0.00052734767495" size="0.005" rgba="1 0 0 1" />
+          <body name="Right_wheel_Link" pos="-0.16988134 -0.18882875 0.017550917" quat="1 0 0 0">
+            <joint name="Right_wheel_joint" axis="0 0 1" damping="0.01" />
+            <inertial pos="-2.2099763e-05 -0.00010397585 0.0079509003" mass="0.5" fullinertia="0.00047304499 0.00047446066 0.00081435342 3.9970034e-07 -2.1395826e-07 -8.8489674e-07" />
+            <geom name="Right_wheel_Link_vis" type="mesh" mesh="Right_wheel_Link" pos="0 0 0" quat="0.97885935 -1.2818561e-06 1.3870014e-06 -0.20453453" contype="0" conaffinity="0" rgba="0.79 0.82 0.93 1" />
+            <geom name="Right_wheel_Link_col" type="cylinder" size="0.0600001 0.0291751" pos="0 0 -0.0041748932" contype="1" conaffinity="1" group="3" solref="0.008 1" solimp="0.95 0.99 0.001" friction="1 0.005 0.0001" rgba="0 0 0 0" />
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <equality>
+    <connect name="L_loop1" site1="pin1_A" site2="pin1_B" solref="0.002 1" solimp="0.99 0.99 0.01 0.5 2" />
+    <connect name="L_loop2" site1="pin2_A" site2="pin2_B" solref="0.002 1" solimp="0.99 0.99 0.01 0.5 2" />
+    <connect name="R_loop3" site1="pin3_A" site2="pin3_B" solref="0.002 1" solimp="0.99 0.99 0.01 0.5 2" />
+    <connect name="R_loop4" site1="pin4_A" site2="pin4_B" solref="0.002 1" solimp="0.99 0.99 0.01 0.5 2" />
+  </equality>
+  <actuator>
+    <motor name="Left_front_joint_motor" joint="Left_front_joint" gear="1" ctrlrange="-3.14 3.14" />
+    <motor name="Left_rear_joint_motor" joint="Left_rear_joint" gear="1" ctrlrange="-3.14 3.14" />
+    <motor name="Left_wheel_joint_motor" joint="Left_wheel_joint" gear="1" ctrlrange="-3.14 3.14" />
+    <motor name="Right_front_joint_motor" joint="Right_front_joint" gear="1" ctrlrange="-3.14 3.14" />
+    <motor name="Right_rear_joint_motor" joint="Right_rear_joint" gear="1" ctrlrange="-3.14 3.14" />
+    <motor name="Right_wheel_joint_motor" joint="Right_wheel_joint" gear="1" ctrlrange="-3.14 3.14" />
+  </actuator>
+  <contact>
+    <exclude body1="Left_front_Link" body2="Left_front_child1_Link" />
+    <exclude body1="Left_front_Link" body2="Left_rear_Link" />
+    <exclude body1="Left_front_child1_Link" body2="Left_front_child2_Link" />
+    <exclude body1="Left_front_child2_Link" body2="Left_front_child3_Link" />
+    <exclude body1="Left_front_child2_Link" body2="Left_rear_Link" />
+    <exclude body1="Left_front_child3_Link" body2="Left_rear_child1_link" />
+    <exclude body1="Left_rear_Link" body2="Left_rear_child1_link" />
+    <exclude body1="Left_rear_child1_link" body2="Left_wheel_link" />
+    <exclude body1="Right_front_Link" body2="Right_front_child1_Link" />
+    <exclude body1="Right_front_Link" body2="Right_rear_Link" />
+    <exclude body1="Right_front_child1_Link" body2="Right_front_child2_Link" />
+    <exclude body1="Right_front_child2_Link" body2="Right_front_child3_Link" />
+    <exclude body1="Right_front_child2_Link" body2="Right_rear_Link" />
+    <exclude body1="Right_front_child3_Link" body2="Right_rear_child1_Link" />
+    <exclude body1="Right_rear_Link" body2="Right_rear_child1_Link" />
+    <exclude body1="Right_rear_child1_Link" body2="Right_wheel_Link" />
+    <exclude body1="base_link" body2="Left_front_Link" />
+    <exclude body1="base_link" body2="Left_rear_Link" />
+    <exclude body1="base_link" body2="Right_front_Link" />
+    <exclude body1="base_link" body2="Right_rear_Link" />
+  </contact>
+  <keyframe>
+    <key name="home" qpos="0 0 0.034425913 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" ctrl="0 0 0 0 0 0" />
+  </keyframe>
+</mujoco>

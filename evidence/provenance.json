@@ -1,0 +1,57 @@
+{
+  "created": "2026-11-08（Asia/Shanghai）",
+  "project": "v14 完整闭链模型 RL 训练（mjlab / MuJoCo Warp GPU）",
+  "policies": {
+    "rise": {
+      "file": "policy/v14_rise_deploy.onnx",
+      "sha256": "a120eb39b60e12c348695de3ba0749d9f923f8ef4b7b2f12a14c4c4d89a52035",
+      "capability": "趴卧姿起身 + 站/走/转/高度跟踪",
+      "source_checkpoint": "logs/rsl_rl/wheelleg_v14_rise/2026-11-07_23-00-35_riseH_bc_ft/model_3598.pt",
+      "source_checkpoint_sha256": "cf8a96a8d72832cbb271319eab2bb27d57ce3c92c0feb47a055a9007c1fe0dd8"
+    },
+    "flat": {
+      "file": "policy/v14_full_closed_deploy.onnx",
+      "sha256": "f59facc5866834c9e52cf616391389c5bc5ebb90e09d37920211a18ed117eccf",
+      "capability": "站/走/转/高度跟踪（站姿起步；不保证趴卧起身）"
+    }
+  },
+  "training": {
+    "asset": "v14 完整闭链 MJCF（15 link、4 条 connect、14.1891110559 kg、含底部导轮几何）",
+    "method": [
+      "教师轨迹 BC 蒸馏",
+      "被动抬升快照课程",
+      "PPO 精调 600 iter @1024 env，LR 3e-4 fixed"
+    ],
+    "teacher": "旧 v14_flat 策略（简化模型训练）在完整闭链模型上的闭环 rollout",
+    "run": "wheelleg_v14_rise/2026-11-07_23-00-35_riseH_bc_ft"
+  },
+  "validation": {
+    "sim2sim": "reports/rise_from_prone_sim2sim_summary.md",
+    "prone": {
+      "rise_time_s": [
+        0.5,
+        0.5,
+        0.5,
+        0.52
+      ],
+      "final_height_m": [
+        0.1903,
+        0.1888,
+        0.1903,
+        0.2018
+      ],
+      "stand_hold_fraction": 0.95,
+      "verdict": "4/4 PASS"
+    },
+    "jitter_seeds": {
+      "1": "PASS (rise 0.47s)",
+      "7": "PASS (0.48s)",
+      "42": "PASS (0.48s)"
+    }
+  },
+  "limits": [
+    "力矩口径 40/40/20 N·m：±3.14 口径下站不住（静力需后髋约 17 N·m）",
+    "仅在 MuJoCo 完整闭链模型上验证，实车未验证",
+    "H723 现有板载 C 推理为 encoder(125→3)+actor(28→6) 双输入结构，与此单输入 125→256³→6 MLP 不兼容，需要重新生成权重或改网络"
+  ]
+}

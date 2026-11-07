@@ -1,0 +1,7 @@
+# v14 部署参考运行时的最小依赖（GPU 不需要；onnxruntime 用 CPU 版即可）
+numpy>=1.24
+mujoco>=3.2,<4
+onnxruntime>=1.17
+# 可选：仅用于跑录像/可视化
+matplotlib>=3.8
+Pillow>=10

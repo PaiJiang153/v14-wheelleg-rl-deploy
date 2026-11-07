@@ -1,0 +1,48 @@
+# v14 轮腿机器人 · 完整闭链模型 RL 训练成果 + 部署交接包
+
+> 一个**可以直接交给第三方部署**的策略包：从趴卧姿自主起身 → 保持平衡 → 站/走/转/高度跟踪。
+> 训练物理 = 部署物理：**v14 完整闭链模型**（15 link、4 条 `<connect>`、14.189 kg、含底部导轮几何），
+> 用 mjlab / MuJoCo Warp GPU 训练（不是旧的「后链串联等效」简化模型）。
+
+## 内容
+
+| 文件/目录 | 说明 |
+| --- | --- |
+| [`AI_HANDOFF_PROMPT.md`](AI_HANDOFF_PROMPT.md) | **给接手 AI 的任务说明（可直接复制）** |
+| [`README_ZH.md`](README_ZH.md) | 交接总览：自检、部署要点、已知限制、文件清单 |
+| [`INTERFACE.md`](INTERFACE.md) | 精确接口合同：ONNX 输入/历史布局/25 维观测/动作解码/闭链力矩映射/硬件映射 |
+| [`policy/`](policy/) | `v14_rise_deploy.onnx`（主交付）+ `v14_full_closed_deploy.onnx` |
+| [`model/`](model/) | 完整 v14 闭链 MJCF（场景/网格/URDF），与训练/验收同一份 |
+| [`runtime/`](runtime/) | 参考运行时：观测组装+推理+动作解码+闭链力矩映射、闭链运动学、已验收的闭环回放、自检脚本 |
+| [`evidence/`](evidence/) | 5 组 ONNX 数值测试向量、来源/哈希/训练配置存档 |
+| [`reports/`](reports/) | 完整训练报告 + sim2sim 验收数据 |
+| [`media/`](media/) | 起身分帧图、GIF、4 场景闭环录像 |
+| [`training_scripts/`](training_scripts/) | BC 蒸馏 / 教师轨迹采集 / 快照生成脚本（可选） |
+
+## 快速自检
+
+```bash
+pip install -r runtime/requirements.txt
+python runtime/verify_package.py          # 期望 PASS
+python runtime/sim2sim_replay.py --onnx policy/v14_rise_deploy.onnx \
+    --no-viewer --duration 10 --init prone   # 期望从趴卧起身，末态 h≈0.190 m、倾斜≈1.3°
+```
+
+## 已验证（完整闭链 MuJoCo，40/40/20 N·m）
+
+从趴卧姿开始，10 s 闭环：起身 **0.50 s**、末态高度 **0.1888–0.2018 m**、站姿保持 **0.95**，
+站定/前进/转向/高度 **4/4 PASS**；趴卧初始位姿加扰动（base ±2 cm / yaw ±0.3 / 关节 ±0.05）3 个种子也 PASS。
+
+![起身分帧](media/rise_sequence.png)
+
+## 重要提醒（详见 `README_ZH.md` §4/§6）
+
+- **力矩口径必须 40/40/20 N·m**：±3.14 口径下任何策略都站不住（站立静力需后髋约 17 N·m）。
+- 现有 H723 板载 C 推理是 `encoder+actor` 双输入结构，与本策略（单输入 `125→256³→6` MLP）
+  **不兼容**，上板需重新生成权重/改网络；先用 `evidence/test_vectors.json` 对齐数值。
+- 仅在 MuJoCo 完整闭链模型上验证，**实车未验证**；编码器零位/方向、力矩换算仍是参考值。
+
+## 训练来源
+
+训练工作区、失败尝试诊断与复现命令见 [`reports/TRAINING_REPORT.md`](reports/TRAINING_REPORT.md)；
+策略 sha256、来源 checkpoint、训练方法见 [`evidence/provenance.json`](evidence/provenance.json)。
