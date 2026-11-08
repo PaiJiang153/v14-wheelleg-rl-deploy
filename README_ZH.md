@@ -13,11 +13,15 @@
 
 | 策略 | 文件 | 能力 |
 | --- | --- | --- |
-| **RISE-DR（v1.2，鲁棒档）** | `policy/v14_rise_dr_deploy.onnx` | **趴卧起身 + 宽指令跟踪 + 强域随机化训练**（组合扰动下速度误差标准差 -73%，代价：fwd 1.5 实测 1.19 m/s） |
+| **RISE-ANNEAL（v1.3，DR 退火折中档，推荐）** | `policy/v14_rise_anneal_deploy.onnx` | **趴卧起身 + 宽指令跟踪（标称 \|vx 误差\| 0.0396，接近 v1.1）+ 保留 DR 组合波动减半** |
+| RISE-DR（v1.2，鲁棒档） | `policy/v14_rise_dr_deploy.onnx` | 趴卧起身 + 宽指令跟踪 + 强域随机化训练（组合扰动下速度误差标准差 -73%，代价：fwd 1.5 实测 1.19 m/s） |
 | **RISE-WIDE（v1.1，性能档，推荐标称性能）** | `policy/v14_rise_wide_deploy.onnx` | **趴卧姿起身 + 保持 + vx ±1.5 m/s / wz ±1.2 rad/s / 高度 0.14–0.21 m 跟踪** |
 | RISE（v1.0 保守档） | `policy/v14_rise_deploy.onnx` | 趴卧姿起身 + 站/走/转/高度（宽指令跟踪误差略大） |
 | FLAT | `policy/v14_full_closed_deploy.onnx` | 站/走/转/高度跟踪（站姿起步；不保证趴卧起身） |
 
+- RISE-ANNEAL（v1.3，折中档）：强 DR→弱 DR→无 DR 三段退火，标称 |vx 误差| **0.0396**
+  （v1.2 0.0626 / v1.1 0.0349），DR 组合速度误差标准差 **0.0247**（v1.1 0.0499 / v1.2 0.0135）；
+  代价：kp×0.55 单项扰动下不能起身（v1.2 可以）。详见 `reports/anneal_cmd_matrix.md`。
 - RISE-DR（v1.2，鲁棒档）：训练期强域随机化（质量/质心/摩擦/关节/电机/kp/kd/滞后/延迟/推力/
   编码器偏置/趴卧姿态扰动）。验收：DR 分布内随机组合 12/12 起身成功，速度误差标准差
   **0.050→0.0135（-73%）**、最大误差 -54%；单项扰动与推力恢复 PASS。详见 `reports/robust_cmd_matrix.md`。
@@ -98,6 +102,25 @@ python runtime/sim2sim_replay.py --onnx policy/v14_rise_deploy.onnx \
 FLAT 策略的站/走/转/高度验收：`reports/flat_sim2sim_summary.md`。
 录像与分帧图：`media/`（`rise_sequence.png` 是起身分帧，`all_scenarios_1x.mp4` 是 4 场景拼接）。
 
+## 5.1 变高度功能（height 0.14–0.21 m，无需新网络）
+
+策略把 height 指令编码在观测里（25 维第 8 维 ×5.0）。变高度 = 运行时平滑修改 height：
+用 `runtime/policy_runtime.py` 的 `HeightCommand`（目标高度 + 斜坡限速 + 范围裁剪，默认
+0.12 m/s、0.14–0.21 m）：
+
+```python
+from policy_runtime import HeightCommand
+hc = HeightCommand(initial=0.18, rate=0.12)   # rate 建议 0.10~0.15 m/s
+hc.set_target(0.21)                          # 例如按键“升高”
+# 每个 10 ms 控制周期：
+cmd_h = hc.step(dt=0.01)                     # 作为观测 commands[2] 使用
+```
+
+实测（v1.3，完整闭链 sim2sim）：站立 0.14→0.21 m 平均误差 **6.0 mm**、过渡 **0.20–0.37 s**；
+边走边变高（0.15–0.20 m）平均误差 6.0 mm；走+转+变高平均误差 4.3 mm。
+录像/曲线见 `media/height_demo/`，明细 `reports/height_change.md` 与
+`reports/height_{stand,walk,mixed}.json`。
+
 ## 6. 已知限制（不要外推）
 
 - **只在 MuJoCo 完整闭链模型上验证**，没有实车数据；实车必须重新验证。
@@ -118,6 +141,7 @@ README.md                  ← 本文件
 INTERFACE.md               ← 接口/时序/硬件映射的精确合同
 SHA256SUMS.txt             ← 全部文件哈希（verify_package.py 会校验）
 policy/
+  v14_rise_anneal_deploy.onnx ← v1.3 DR 退火折中档（标称接近 v1.1，DR 波动减半）
   v14_rise_dr_deploy.onnx   ← v1.2 鲁棒档（强 DR 训练，组合扰动误差 -73%）
   v14_rise_wide_deploy.onnx ← v1.1 性能档：趴卧起身 + vx ±1.5 / wz ±1.2 / 高度 0.14–0.21
   v14_rise_deploy.onnx      ← v1.0 保守档：趴卧起身 + 站/走/转/高度

@@ -7,7 +7,7 @@
 
 | 项 | 值 |
 | --- | --- |
-| 文件 | `policy/v14_rise_dr_deploy.onnx`（v1.2 鲁棒档）/ `policy/v14_rise_wide_deploy.onnx`（v1.1 宽指令）/ `policy/v14_rise_deploy.onnx`（v1.0 保守档）/ `policy/v14_full_closed_deploy.onnx`（平地） |
+| 文件 | `policy/v14_rise_anneal_deploy.onnx`（v1.3 DR 退火折中档）/ `policy/v14_rise_dr_deploy.onnx`（v1.2 鲁棒档）/ `policy/v14_rise_wide_deploy.onnx`（v1.1 宽指令）/ `policy/v14_rise_deploy.onnx`（v1.0 保守档）/ `policy/v14_full_closed_deploy.onnx`（平地） |
 | sha256 | 见 `SHA256SUMS.txt` / `evidence/provenance.json` |
 | 输入 | 名 `obs`，形状 `(batch, 125)`，dtype **float32**；**只有这一个输入** |
 | 输出 | 名 `actions`，形状 `(batch, 6)`，dtype float32 |
@@ -72,6 +72,21 @@ tau = clip(tau, ±40/±40/±20 按列)
 - 时序：策略 **100 Hz**；物理/PD **200 Hz**（每策略周期 2 个子步，dt=0.005）。
   训练时 PD 与执行器滞后都按子步计算、动作有 1 个子步延迟；实机按自身控制周期实现即可。
 - `kp=20`、`kd=1`、`wheel_kd=0.2` 是策略训练时使用的**部署口径**，不能随意改。
+
+### 3.1 变高度功能
+
+height 指令 `h_cmd ∈ [0.14, 0.21]` 就是「轮腿高度」控制量：修改它即可让策略蹲下/站起，
+不需要新网络。**必须斜坡限速**（建议 0.10–0.15 m/s），阶跃指令会造成冲击。
+参考实现见 `runtime/policy_runtime.py::HeightCommand`（目标 + 限速 + 裁剪）：
+
+```python
+hc = HeightCommand(initial=0.18, rate=0.12)
+hc.set_target(0.21)                 # 升高
+h_cmd = hc.step(dt=0.01)            # 每 10 ms 取一次，写进观测 commands[2]
+```
+
+实测（v1.3，站立）：0.14↔0.21 m 平均误差 6.0 mm、过渡 0.20–0.37 s；边走边变高平均误差 6.0 mm。
+注意 0.14 m 为训练最低（实际 ~0.152 m），0.21 m 接近腿长上限（实际 ~0.207–0.211 m）。
 
 ## 4. 力矩限幅与安全
 

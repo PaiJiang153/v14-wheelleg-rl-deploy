@@ -246,6 +246,37 @@ def default_stand_history(runtime: V14PolicyRuntime) -> ObsHistory:
     return hist
 
 
+class HeightCommand:
+    """实机/运行时「变高度」指令：目标高度 + 斜坡限速 + 范围裁剪。
+
+    策略本身已把 height 指令做进观测（25 维第 8 维），所以变高度不需要新网络，
+    只需要按部署节奏平滑修改指令（阶跃会造成冲击）。建议上限 0.10~0.15 m/s。
+
+        hc = HeightCommand(initial=0.18, rate=0.12)
+        hc.set_target(0.21)
+        while True:                       # 每 10 ms 调一次
+            cmd = [vx, wz, hc.step(dt=0.01)]
+            ...
+    """
+
+    def __init__(self, initial: float = 0.18, rate: float = 0.12,
+                 lo: float = 0.14, hi: float = 0.21):
+        self.lo = float(lo)
+        self.hi = float(hi)
+        self.rate = float(rate)
+        self.height = float(np.clip(initial, self.lo, self.hi))
+        self.target = self.height
+
+    def set_target(self, target: float) -> None:
+        self.target = float(np.clip(target, self.lo, self.hi))
+
+    def step(self, dt: float = 0.01) -> float:
+        max_step = self.rate * max(float(dt), 1e-6)
+        delta = float(np.clip(self.target - self.height, -max_step, max_step))
+        self.height = float(np.clip(self.height + delta, self.lo, self.hi))
+        return self.height
+
+
 if __name__ == "__main__":
     rt = V14PolicyRuntime()
     h = default_stand_history(rt)

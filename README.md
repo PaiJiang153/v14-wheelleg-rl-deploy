@@ -30,6 +30,11 @@ python runtime/sim2sim_replay.py --onnx policy/v14_rise_deploy.onnx \
 
 ## 已验证（完整闭链 MuJoCo，40/40/20 N·m）
 
+**v1.3（折中档，`v14_rise_anneal_deploy.onnx`）**：DR 课程退火（强 DR→弱 DR→无 DR）后，
+标称 |vx 误差| **0.0396**（v1.2 0.0626、v1.1 0.0349），DR 组合速度误差标准差 **0.0247**
+（v1.1 0.0499、v1.2 0.0135）；同时新增**变高度功能**（0.14–0.21 m 平滑改变，站立实测平均误差 6.0 mm、
+过渡 0.20–0.37 s）。详见 `reports/anneal_cmd_matrix.md` 与 `reports/height_change.md`。
+
 **v1.2（鲁棒档，`v14_rise_dr_deploy.onnx`）**：强域随机化训练（质量/质心/摩擦/关节/电机/kp/kd/滞后/
 动作延迟/推力/编码器偏置/趴卧姿态）；DR 分布内随机组合 12/12 起身，速度跟踪误差标准差
 **-73%**、最大误差 -54%，单项扰动与推力恢复 PASS。详见 `reports/robust_cmd_matrix.md`。

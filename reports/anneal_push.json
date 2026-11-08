@@ -1,0 +1,66 @@
+[
+  {
+    "variant": "push_1p2mps",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.44,
+    "final_height_m": 0.17855,
+    "vx_body": 0.073609,
+    "wz": -0.027245,
+    "tilt_mean_deg": 1.339206,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [
+      {
+        "t": 2.5099999999999687,
+        "dvx": 0.0,
+        "dvy": 1.2,
+        "dwz": 0.0
+      },
+      {
+        "t": 4.009999999999937,
+        "dvx": 0.9,
+        "dvy": -0.8,
+        "dwz": 0.0
+      }
+    ],
+    "policy": "a7750"
+  },
+  {
+    "variant": "push_1p2mps",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.45,
+    "final_height_m": 0.177612,
+    "vx_body": 0.592267,
+    "wz": -0.063785,
+    "tilt_mean_deg": 6.540201,
+    "fell": null,
+    "verdict": "WARN: contact_clean_after_rise",
+    "pushes": [
+      {
+        "t": 2.5099999999999687,
+        "dvx": 0.0,
+        "dvy": 1.2,
+        "dwz": 0.0
+      },
+      {
+        "t": 4.009999999999937,
+        "dvx": 0.9,
+        "dvy": -0.8,
+        "dwz": 0.0
+      }
+    ],
+    "policy": "a7750"
+  }
+]

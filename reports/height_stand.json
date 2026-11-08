@@ -1,0 +1,73 @@
+{
+  "mode": "",
+  "height_cmd_range": [
+    0.14,
+    0.21
+  ],
+  "base_z_range": [
+    0.15179771485369759,
+    0.21069310877330114
+  ],
+  "max_abs_err_m": 0.022144497142719377,
+  "mean_abs_err_m": 0.005951569654631935,
+  "holds": [
+    {
+      "t_start": 0.0,
+      "t_end": 2.0,
+      "target_m": 0.18,
+      "mean_base_z": 0.1785896260866593,
+      "mean_abs_err_m": 0.0014103739133406728
+    },
+    {
+      "t_start": 2.0,
+      "t_end": 4.5,
+      "target_m": 0.21,
+      "mean_base_z": 0.20672294942537753,
+      "mean_abs_err_m": 0.003277050574622429
+    },
+    {
+      "t_start": 4.5,
+      "t_end": 7.0,
+      "target_m": 0.16,
+      "mean_base_z": 0.16522454410112586,
+      "mean_abs_err_m": 0.005224544101125846
+    },
+    {
+      "t_start": 7.0,
+      "t_end": 9.5,
+      "target_m": 0.14,
+      "mean_base_z": 0.15447052848634815,
+      "mean_abs_err_m": 0.014470528486348161
+    },
+    {
+      "t_start": 9.5,
+      "t_end": 12.000000000000476,
+      "target_m": 0.18,
+      "mean_base_z": 0.17849975093126,
+      "mean_abs_err_m": 0.0015002490687399915
+    }
+  ],
+  "transitions": [
+    {
+      "t_start": 2.0,
+      "target_m": 0.21,
+      "settle_time_s": 0.24999999999997424
+    },
+    {
+      "t_start": 4.5,
+      "target_m": 0.16,
+      "settle_time_s": 0.3699999999999184
+    },
+    {
+      "t_start": 7.0,
+      "target_m": 0.14,
+      "settle_time_s": 0.19999999999986873
+    },
+    {
+      "t_start": 9.5,
+      "target_m": 0.18,
+      "settle_time_s": 0.20000000000011653
+    }
+  ],
+  "rate_limit_mps": 0.12000000000000066
+}
