@@ -1,0 +1,838 @@
+[
+  {
+    "variant": "nominal",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.4,
+    "final_height_m": 0.175582,
+    "vx_body": -0.030091,
+    "wz": -0.002766,
+    "tilt_mean_deg": 0.448092,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "nominal",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.39,
+    "final_height_m": 0.17865,
+    "vx_body": 0.388807,
+    "wz": -0.003476,
+    "tilt_mean_deg": 0.264181,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "nominal",
+    "case": "yaw_0p3",
+    "cmd": [
+      0.0,
+      0.3,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.4,
+    "final_height_m": 0.175214,
+    "vx_body": -0.009425,
+    "wz": 0.203805,
+    "tilt_mean_deg": 0.331676,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "nominal",
+    "case": "h_0p16",
+    "cmd": [
+      0.0,
+      0.0,
+      0.16
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.4,
+    "final_height_m": 0.160645,
+    "vx_body": -0.041035,
+    "wz": -0.003052,
+    "tilt_mean_deg": 0.365361,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "mass_+4kg",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.49,
+    "final_height_m": 0.174232,
+    "vx_body": -0.029703,
+    "wz": -0.003697,
+    "tilt_mean_deg": 1.062709,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "mass_+4kg",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.5,
+    "final_height_m": 0.174948,
+    "vx_body": 0.40584,
+    "wz": -0.002911,
+    "tilt_mean_deg": 0.335331,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "mass_+4kg",
+    "case": "yaw_0p3",
+    "cmd": [
+      0.0,
+      0.3,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.5,
+    "final_height_m": 0.175596,
+    "vx_body": -0.026042,
+    "wz": 0.243247,
+    "tilt_mean_deg": 1.007173,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "mass_+4kg",
+    "case": "h_0p16",
+    "cmd": [
+      0.0,
+      0.0,
+      0.16
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.41,
+    "final_height_m": 0.155582,
+    "vx_body": -0.03443,
+    "wz": 0.000617,
+    "tilt_mean_deg": 0.969928,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "com_+5cm",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.47,
+    "final_height_m": 0.179566,
+    "vx_body": 0.01844,
+    "wz": 0.006604,
+    "tilt_mean_deg": 0.602799,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "com_+5cm",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.44,
+    "final_height_m": 0.180039,
+    "vx_body": 0.412968,
+    "wz": 0.003659,
+    "tilt_mean_deg": 1.263314,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "com_+5cm",
+    "case": "yaw_0p3",
+    "cmd": [
+      0.0,
+      0.3,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.47,
+    "final_height_m": 0.17555,
+    "vx_body": 0.026855,
+    "wz": 0.205351,
+    "tilt_mean_deg": 0.657981,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "com_+5cm",
+    "case": "h_0p16",
+    "cmd": [
+      0.0,
+      0.0,
+      0.16
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.43,
+    "final_height_m": 0.162914,
+    "vx_body": 0.020662,
+    "wz": 0.009101,
+    "tilt_mean_deg": 0.778981,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "friction_x0.35",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.4,
+    "final_height_m": 0.175582,
+    "vx_body": -0.030091,
+    "wz": -0.002766,
+    "tilt_mean_deg": 0.448092,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "friction_x0.35",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.39,
+    "final_height_m": 0.17865,
+    "vx_body": 0.388807,
+    "wz": -0.003476,
+    "tilt_mean_deg": 0.264181,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "friction_x0.35",
+    "case": "yaw_0p3",
+    "cmd": [
+      0.0,
+      0.3,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.4,
+    "final_height_m": 0.175214,
+    "vx_body": -0.009425,
+    "wz": 0.203805,
+    "tilt_mean_deg": 0.331676,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "friction_x0.35",
+    "case": "h_0p16",
+    "cmd": [
+      0.0,
+      0.0,
+      0.16
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.4,
+    "final_height_m": 0.160645,
+    "vx_body": -0.041035,
+    "wz": -0.003052,
+    "tilt_mean_deg": 0.365361,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "friction_x2.0",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.4,
+    "final_height_m": 0.175357,
+    "vx_body": -0.037851,
+    "wz": -0.004818,
+    "tilt_mean_deg": 0.979355,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "friction_x2.0",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.4,
+    "final_height_m": 0.176814,
+    "vx_body": 0.384781,
+    "wz": -0.010618,
+    "tilt_mean_deg": 0.502471,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "friction_x2.0",
+    "case": "yaw_0p3",
+    "cmd": [
+      0.0,
+      0.3,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.4,
+    "final_height_m": 0.172369,
+    "vx_body": -0.021056,
+    "wz": 0.218005,
+    "tilt_mean_deg": 1.129632,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "friction_x2.0",
+    "case": "h_0p16",
+    "cmd": [
+      0.0,
+      0.0,
+      0.16
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.4,
+    "final_height_m": 0.161355,
+    "vx_body": -0.044429,
+    "wz": -0.004187,
+    "tilt_mean_deg": 0.829014,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "effort_x0.6",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.4,
+    "final_height_m": 0.175582,
+    "vx_body": -0.030091,
+    "wz": -0.002766,
+    "tilt_mean_deg": 0.448092,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "effort_x0.6",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.39,
+    "final_height_m": 0.17865,
+    "vx_body": 0.388807,
+    "wz": -0.003476,
+    "tilt_mean_deg": 0.264181,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "effort_x0.6",
+    "case": "yaw_0p3",
+    "cmd": [
+      0.0,
+      0.3,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.4,
+    "final_height_m": 0.175214,
+    "vx_body": -0.009425,
+    "wz": 0.203805,
+    "tilt_mean_deg": 0.331676,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "effort_x0.6",
+    "case": "h_0p16",
+    "cmd": [
+      0.0,
+      0.0,
+      0.16
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.4,
+    "final_height_m": 0.160645,
+    "vx_body": -0.041035,
+    "wz": -0.003052,
+    "tilt_mean_deg": 0.365361,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "kp_x0.55",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.61,
+    "final_height_m": 0.172871,
+    "vx_body": -0.038376,
+    "wz": 0.001604,
+    "tilt_mean_deg": 0.984894,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "kp_x0.55",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.62,
+    "final_height_m": 0.172544,
+    "vx_body": 0.335914,
+    "wz": 0.005219,
+    "tilt_mean_deg": 1.00251,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "kp_x0.55",
+    "case": "yaw_0p3",
+    "cmd": [
+      0.0,
+      0.3,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.61,
+    "final_height_m": 0.165958,
+    "vx_body": -0.049909,
+    "wz": 0.192116,
+    "tilt_mean_deg": 0.408689,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "kp_x0.55",
+    "case": "h_0p16",
+    "cmd": [
+      0.0,
+      0.0,
+      0.16
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.59,
+    "final_height_m": 0.154614,
+    "vx_body": -0.050399,
+    "wz": 0.000771,
+    "tilt_mean_deg": 1.059057,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "tau_40ms",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.42,
+    "final_height_m": 0.179473,
+    "vx_body": -0.025094,
+    "wz": -0.005898,
+    "tilt_mean_deg": 1.364494,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "tau_40ms",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.41,
+    "final_height_m": 0.172431,
+    "vx_body": 0.397505,
+    "wz": -0.003896,
+    "tilt_mean_deg": 0.988856,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "tau_40ms",
+    "case": "yaw_0p3",
+    "cmd": [
+      0.0,
+      0.3,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.42,
+    "final_height_m": 0.174107,
+    "vx_body": -0.044111,
+    "wz": 0.299286,
+    "tilt_mean_deg": 1.715952,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "tau_40ms",
+    "case": "h_0p16",
+    "cmd": [
+      0.0,
+      0.0,
+      0.16
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.41,
+    "final_height_m": 0.165835,
+    "vx_body": -0.024468,
+    "wz": -0.003239,
+    "tilt_mean_deg": 1.360824,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "delay_2",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.4,
+    "final_height_m": 0.176301,
+    "vx_body": -0.029441,
+    "wz": -0.003382,
+    "tilt_mean_deg": 0.316078,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "delay_2",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.39,
+    "final_height_m": 0.17865,
+    "vx_body": 0.388808,
+    "wz": -0.003477,
+    "tilt_mean_deg": 0.264187,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "delay_2",
+    "case": "yaw_0p3",
+    "cmd": [
+      0.0,
+      0.3,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.4,
+    "final_height_m": 0.17516,
+    "vx_body": -0.008672,
+    "wz": 0.202557,
+    "tilt_mean_deg": 0.22176,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "delay_2",
+    "case": "h_0p16",
+    "cmd": [
+      0.0,
+      0.0,
+      0.16
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.39,
+    "final_height_m": 0.161243,
+    "vx_body": -0.040844,
+    "wz": -0.003521,
+    "tilt_mean_deg": 0.315156,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "combo_harsh",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": false,
+    "rise_time_s": null,
+    "final_height_m": 0.151709,
+    "vx_body": 0.022622,
+    "wz": 0.031909,
+    "tilt_mean_deg": 1.756422,
+    "fell": null,
+    "verdict": "FAIL: did not rise",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "combo_harsh",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": false,
+    "rise_time_s": null,
+    "final_height_m": 0.14725,
+    "vx_body": 0.404335,
+    "wz": 0.068314,
+    "tilt_mean_deg": 1.441513,
+    "fell": null,
+    "verdict": "FAIL: did not rise",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "combo_harsh",
+    "case": "yaw_0p3",
+    "cmd": [
+      0.0,
+      0.3,
+      0.18
+    ],
+    "rise_success": false,
+    "rise_time_s": null,
+    "final_height_m": 0.126021,
+    "vx_body": 0.191336,
+    "wz": 0.278721,
+    "tilt_mean_deg": 6.701459,
+    "fell": null,
+    "verdict": "FAIL: did not rise",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "combo_harsh",
+    "case": "h_0p16",
+    "cmd": [
+      0.0,
+      0.0,
+      0.16
+    ],
+    "rise_success": false,
+    "rise_time_s": null,
+    "final_height_m": 0.126297,
+    "vx_body": 0.11785,
+    "wz": 0.095052,
+    "tilt_mean_deg": 5.288732,
+    "fell": null,
+    "verdict": "FAIL: did not rise",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "combo_extreme",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": false,
+    "rise_time_s": null,
+    "final_height_m": 0.085274,
+    "vx_body": 0.12309,
+    "wz": 0.162907,
+    "tilt_mean_deg": 14.797441,
+    "fell": null,
+    "verdict": "FAIL: did not rise",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "combo_extreme",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": false,
+    "rise_time_s": null,
+    "final_height_m": 0.090466,
+    "vx_body": 0.235725,
+    "wz": 0.262593,
+    "tilt_mean_deg": 12.070355,
+    "fell": null,
+    "verdict": "FAIL: did not rise",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "combo_extreme",
+    "case": "yaw_0p3",
+    "cmd": [
+      0.0,
+      0.3,
+      0.18
+    ],
+    "rise_success": false,
+    "rise_time_s": null,
+    "final_height_m": 0.074684,
+    "vx_body": 0.296546,
+    "wz": 0.317045,
+    "tilt_mean_deg": 13.446105,
+    "fell": null,
+    "verdict": "FAIL: did not rise",
+    "pushes": [],
+    "policy": "dr2"
+  },
+  {
+    "variant": "combo_extreme",
+    "case": "h_0p16",
+    "cmd": [
+      0.0,
+      0.0,
+      0.16
+    ],
+    "rise_success": false,
+    "rise_time_s": null,
+    "final_height_m": 0.081509,
+    "vx_body": 0.02525,
+    "wz": 0.05732,
+    "tilt_mean_deg": 15.317784,
+    "fell": null,
+    "verdict": "FAIL: did not rise",
+    "pushes": [],
+    "policy": "dr2"
+  }
+]

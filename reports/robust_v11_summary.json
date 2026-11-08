@@ -1,0 +1,762 @@
+[
+  {
+    "variant": "nominal",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.43,
+    "final_height_m": 0.179183,
+    "vx_body": -0.010799,
+    "wz": -0.013711,
+    "tilt_mean_deg": 0.488415,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "nominal",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.42,
+    "final_height_m": 0.180503,
+    "vx_body": 0.481015,
+    "wz": -0.026783,
+    "tilt_mean_deg": 0.309687,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "nominal",
+    "case": "yaw_0p3",
+    "cmd": [
+      0.0,
+      0.3,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.43,
+    "final_height_m": 0.178678,
+    "vx_body": -0.044952,
+    "wz": 0.247662,
+    "tilt_mean_deg": 0.587134,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "nominal",
+    "case": "h_0p16",
+    "cmd": [
+      0.0,
+      0.0,
+      0.16
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.39,
+    "final_height_m": 0.165044,
+    "vx_body": -0.015436,
+    "wz": -0.014871,
+    "tilt_mean_deg": 0.635196,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "mass_+4kg",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.49,
+    "final_height_m": 0.171507,
+    "vx_body": 0.006018,
+    "wz": -0.010282,
+    "tilt_mean_deg": 0.153154,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "mass_+4kg",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.5,
+    "final_height_m": 0.172417,
+    "vx_body": 0.467862,
+    "wz": -0.034393,
+    "tilt_mean_deg": 0.457561,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "mass_+4kg",
+    "case": "yaw_0p3",
+    "cmd": [
+      0.0,
+      0.3,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.49,
+    "final_height_m": 0.17068,
+    "vx_body": -0.02477,
+    "wz": 0.266503,
+    "tilt_mean_deg": 0.360238,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "mass_+4kg",
+    "case": "h_0p16",
+    "cmd": [
+      0.0,
+      0.0,
+      0.16
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.47,
+    "final_height_m": 0.15835,
+    "vx_body": -0.002957,
+    "wz": -0.011173,
+    "tilt_mean_deg": 0.345739,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "com_+5cm",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.54,
+    "final_height_m": 0.173135,
+    "vx_body": -0.081999,
+    "wz": 0.018938,
+    "tilt_mean_deg": 9.57632,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "com_+5cm",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.56,
+    "final_height_m": 0.17289,
+    "vx_body": 0.359359,
+    "wz": 0.006315,
+    "tilt_mean_deg": 8.723806,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "com_+5cm",
+    "case": "yaw_0p3",
+    "cmd": [
+      0.0,
+      0.3,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.54,
+    "final_height_m": 0.172132,
+    "vx_body": -0.043853,
+    "wz": 0.270581,
+    "tilt_mean_deg": 9.313963,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "com_+5cm",
+    "case": "h_0p16",
+    "cmd": [
+      0.0,
+      0.0,
+      0.16
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.51,
+    "final_height_m": 0.156676,
+    "vx_body": -0.068409,
+    "wz": 0.031149,
+    "tilt_mean_deg": 9.676028,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "friction_x0.35",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.43,
+    "final_height_m": 0.179183,
+    "vx_body": -0.010799,
+    "wz": -0.013711,
+    "tilt_mean_deg": 0.488415,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "friction_x0.35",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.42,
+    "final_height_m": 0.180503,
+    "vx_body": 0.481015,
+    "wz": -0.026783,
+    "tilt_mean_deg": 0.309687,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "friction_x0.35",
+    "case": "yaw_0p3",
+    "cmd": [
+      0.0,
+      0.3,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.43,
+    "final_height_m": 0.178678,
+    "vx_body": -0.044952,
+    "wz": 0.247662,
+    "tilt_mean_deg": 0.587134,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "friction_x0.35",
+    "case": "h_0p16",
+    "cmd": [
+      0.0,
+      0.0,
+      0.16
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.39,
+    "final_height_m": 0.165044,
+    "vx_body": -0.015436,
+    "wz": -0.014871,
+    "tilt_mean_deg": 0.635196,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "friction_x2.0",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.43,
+    "final_height_m": 0.177147,
+    "vx_body": -0.015586,
+    "wz": -0.026432,
+    "tilt_mean_deg": 0.739345,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "friction_x2.0",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.44,
+    "final_height_m": 0.178324,
+    "vx_body": 0.461776,
+    "wz": -0.060664,
+    "tilt_mean_deg": 0.670772,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "friction_x2.0",
+    "case": "yaw_0p3",
+    "cmd": [
+      0.0,
+      0.3,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.44,
+    "final_height_m": 0.177267,
+    "vx_body": -0.04445,
+    "wz": 0.268635,
+    "tilt_mean_deg": 0.744743,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "friction_x2.0",
+    "case": "h_0p16",
+    "cmd": [
+      0.0,
+      0.0,
+      0.16
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.4,
+    "final_height_m": 0.162467,
+    "vx_body": -0.02083,
+    "wz": -0.031523,
+    "tilt_mean_deg": 0.978566,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "effort_x0.6",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.43,
+    "final_height_m": 0.179183,
+    "vx_body": -0.010798,
+    "wz": -0.013712,
+    "tilt_mean_deg": 0.488404,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "effort_x0.6",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.43,
+    "final_height_m": 0.180503,
+    "vx_body": 0.481015,
+    "wz": -0.026784,
+    "tilt_mean_deg": 0.309687,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "effort_x0.6",
+    "case": "yaw_0p3",
+    "cmd": [
+      0.0,
+      0.3,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.43,
+    "final_height_m": 0.178678,
+    "vx_body": -0.044952,
+    "wz": 0.247662,
+    "tilt_mean_deg": 0.587133,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "effort_x0.6",
+    "case": "h_0p16",
+    "cmd": [
+      0.0,
+      0.0,
+      0.16
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.39,
+    "final_height_m": 0.165044,
+    "vx_body": -0.015436,
+    "wz": -0.014871,
+    "tilt_mean_deg": 0.635196,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "kp_x0.55",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.63,
+    "final_height_m": 0.158434,
+    "vx_body": -0.006883,
+    "wz": 0.018347,
+    "tilt_mean_deg": 0.730336,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "kp_x0.55",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.64,
+    "final_height_m": 0.158433,
+    "vx_body": 0.422823,
+    "wz": -0.007767,
+    "tilt_mean_deg": 1.225957,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "kp_x0.55",
+    "case": "yaw_0p3",
+    "cmd": [
+      0.0,
+      0.3,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.63,
+    "final_height_m": 0.155555,
+    "vx_body": -0.019594,
+    "wz": 0.200396,
+    "tilt_mean_deg": 0.934893,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "kp_x0.55",
+    "case": "h_0p16",
+    "cmd": [
+      0.0,
+      0.0,
+      0.16
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.61,
+    "final_height_m": 0.144352,
+    "vx_body": -0.015983,
+    "wz": 0.009149,
+    "tilt_mean_deg": 0.997457,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "tau_40ms",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.45,
+    "final_height_m": 0.179182,
+    "vx_body": -0.010694,
+    "wz": -0.013716,
+    "tilt_mean_deg": 0.486153,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "tau_40ms",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.43,
+    "final_height_m": 0.180505,
+    "vx_body": 0.481014,
+    "wz": -0.026783,
+    "tilt_mean_deg": 0.309697,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "tau_40ms",
+    "case": "yaw_0p3",
+    "cmd": [
+      0.0,
+      0.3,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.45,
+    "final_height_m": 0.178677,
+    "vx_body": -0.044947,
+    "wz": 0.247664,
+    "tilt_mean_deg": 0.587052,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "tau_40ms",
+    "case": "h_0p16",
+    "cmd": [
+      0.0,
+      0.0,
+      0.16
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.44,
+    "final_height_m": 0.165044,
+    "vx_body": -0.015382,
+    "wz": -0.014865,
+    "tilt_mean_deg": 0.63374,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "delay_2",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.44,
+    "final_height_m": 0.179183,
+    "vx_body": -0.010666,
+    "wz": -0.013726,
+    "tilt_mean_deg": 0.485553,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "delay_2",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.43,
+    "final_height_m": 0.180502,
+    "vx_body": 0.481015,
+    "wz": -0.026782,
+    "tilt_mean_deg": 0.309679,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "delay_2",
+    "case": "yaw_0p3",
+    "cmd": [
+      0.0,
+      0.3,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.45,
+    "final_height_m": 0.178677,
+    "vx_body": -0.044935,
+    "wz": 0.247674,
+    "tilt_mean_deg": 0.586904,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "delay_2",
+    "case": "h_0p16",
+    "cmd": [
+      0.0,
+      0.0,
+      0.16
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.42,
+    "final_height_m": 0.165043,
+    "vx_body": -0.015386,
+    "wz": -0.01486,
+    "tilt_mean_deg": 0.633822,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "combo_harsh",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": false,
+    "rise_time_s": null,
+    "final_height_m": 0.11207,
+    "vx_body": 0.45267,
+    "wz": 0.085099,
+    "tilt_mean_deg": 14.361348,
+    "fell": null,
+    "verdict": "FAIL: did not rise",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "combo_harsh",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": false,
+    "rise_time_s": null,
+    "final_height_m": 0.135828,
+    "vx_body": 0.546654,
+    "wz": 0.070503,
+    "tilt_mean_deg": 13.151932,
+    "fell": null,
+    "verdict": "FAIL: did not rise",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "combo_harsh",
+    "case": "yaw_0p3",
+    "cmd": [
+      0.0,
+      0.3,
+      0.18
+    ],
+    "rise_success": false,
+    "rise_time_s": null,
+    "final_height_m": 0.128498,
+    "vx_body": 0.411286,
+    "wz": 0.303675,
+    "tilt_mean_deg": 14.254867,
+    "fell": null,
+    "verdict": "FAIL: did not rise",
+    "pushes": [],
+    "policy": "v11"
+  },
+  {
+    "variant": "combo_harsh",
+    "case": "h_0p16",
+    "cmd": [
+      0.0,
+      0.0,
+      0.16
+    ],
+    "rise_success": false,
+    "rise_time_s": null,
+    "final_height_m": 0.08941,
+    "vx_body": 0.066245,
+    "wz": 0.038963,
+    "tilt_mean_deg": 11.82003,
+    "fell": null,
+    "verdict": "FAIL: did not rise",
+    "pushes": [],
+    "policy": "v11"
+  }
+]

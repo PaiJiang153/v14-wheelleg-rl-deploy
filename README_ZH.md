@@ -13,11 +13,15 @@
 
 | 策略 | 文件 | 能力 |
 | --- | --- | --- |
-| **RISE-WIDE（v1.1，推荐）** | `policy/v14_rise_wide_deploy.onnx` | **趴卧姿起身 + 保持 + vx ±1.5 m/s / wz ±1.2 rad/s / 高度 0.14–0.21 m 跟踪** |
+| **RISE-DR（v1.2，鲁棒档）** | `policy/v14_rise_dr_deploy.onnx` | **趴卧起身 + 宽指令跟踪 + 强域随机化训练**（组合扰动下速度误差标准差 -73%，代价：fwd 1.5 实测 1.19 m/s） |
+| **RISE-WIDE（v1.1，性能档，推荐标称性能）** | `policy/v14_rise_wide_deploy.onnx` | **趴卧姿起身 + 保持 + vx ±1.5 m/s / wz ±1.2 rad/s / 高度 0.14–0.21 m 跟踪** |
 | RISE（v1.0 保守档） | `policy/v14_rise_deploy.onnx` | 趴卧姿起身 + 站/走/转/高度（宽指令跟踪误差略大） |
 | FLAT | `policy/v14_full_closed_deploy.onnx` | 站/走/转/高度跟踪（站姿起步；不保证趴卧起身） |
 
-- RISE-WIDE（v1.1）在完整闭链 MuJoCo 上从趴卧姿：**22 条指令全部 PASS**，平均 |vx 误差| 0.035、
+- RISE-DR（v1.2，鲁棒档）：训练期强域随机化（质量/质心/摩擦/关节/电机/kp/kd/滞后/延迟/推力/
+  编码器偏置/趴卧姿态扰动）。验收：DR 分布内随机组合 12/12 起身成功，速度误差标准差
+  **0.050→0.0135（-73%）**、最大误差 -54%；单项扰动与推力恢复 PASS。详见 `reports/robust_cmd_matrix.md`。
+- RISE-WIDE（v1.1，性能档）从趴卧姿：**22 条指令全部 PASS**，平均 |vx 误差| 0.035、
   |wz 误差| 0.020、|高度误差| 0.003 m，起身 0.42 s；vx ±1.5、wz ±1.2、高度 0.14–0.21 全覆盖。
 - RISE（v1.0）从趴卧姿：起身 0.50 s、末态 0.19 m、保持 0.95，4/4 PASS + 3 扰动种子（见 §5）。
 - 训练全过程、失败尝试、诊断与复现命令：`reports/TRAINING_REPORT.md`。
@@ -114,8 +118,9 @@ README.md                  ← 本文件
 INTERFACE.md               ← 接口/时序/硬件映射的精确合同
 SHA256SUMS.txt             ← 全部文件哈希（verify_package.py 会校验）
 policy/
-  v14_rise_wide_deploy.onnx ← **推荐**：趴卧起身 + vx ±1.5 / wz ±1.2 / 高度 0.14–0.21
-  v14_rise_deploy.onnx     ← v1.0 保守档：趴卧起身 + 站/走/转/高度
+  v14_rise_dr_deploy.onnx   ← v1.2 鲁棒档（强 DR 训练，组合扰动误差 -73%）
+  v14_rise_wide_deploy.onnx ← v1.1 性能档：趴卧起身 + vx ±1.5 / wz ±1.2 / 高度 0.14–0.21
+  v14_rise_deploy.onnx      ← v1.0 保守档：趴卧起身 + 站/走/转/高度
   v14_full_closed_deploy.onnx
 runtime/
   policy_runtime.py        ← 部署参考数学：观测组装 + ONNX 推理 + 动作解码 + 闭链力矩映射
@@ -136,6 +141,7 @@ evidence/
   source_checkpoint_sha256.txt
 reports/
   TRAINING_REPORT.md       ← 完整训练报告（含失败尝试、诊断、复现命令）
+  robust_cmd_matrix.md / robust_v1*.json（v1.2 鲁棒性验收）
   wide_cmd_matrix.md / wide_compare.json / wide_summary.json
   wide_jitter_seed{1,7,42}_summary.json
   rise_from_prone_sim2sim_summary.md/json

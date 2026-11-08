@@ -21,6 +21,13 @@
       "source_checkpoint": "logs/rsl_rl/wheelleg_v14_rise/2026-11-08_00-47-12_riseW4_final/model_5648.pt",
       "source_checkpoint_sha256": "f07c09a317d5e422b67d2d40a6d5fe066741109c8569d5461e9e28f3d5649c1e",
       "training": "固定宽指令范围精调 800 iter @1024 env，LR 1e-4，entropy 0.002；新增 height_fine 窄核奖励"
+    },
+    "rise_dr": {
+      "file": "policy/v14_rise_dr_deploy.onnx",
+      "sha256": "3e9d0f95c71d5ccfa1679b81a6217f41eb239564d267253cc62eb5c20d4d97a9",
+      "capability": "趴卧起身 + 宽指令跟踪 + 强域随机化训练（鲁棒档）",
+      "source_checkpoint": "logs/rsl_rl/wheelleg_v14_rise/2026-11-08_19-50-24_riseDR_v12/model_6847.pt",
+      "training": "DR 精调 1200 iter @1024 env：质量/质心/摩擦/关节 armature/damping/frictionloss/编码器偏置/kp/kd/effort/执行器滞后/动作延迟/外力推力/趴卧姿态扰动；LR 1e-4，entropy 0.003"
     }
   },
   "training": {
@@ -71,6 +78,12 @@
         "7": "PASS",
         "42": "PASS"
       }
+    },
+    "dr": {
+      "report": "reports/robust_cmd_matrix.md",
+      "dr_random_combos": "12/12 rise, |vx err| std 0.0135 (v1.1: 0.0499), max 0.070 (v1.1: 0.153)",
+      "single_perturbations": "PASS（质量+4kg/质心+5cm/摩擦×0.35,×2.0/力矩×0.6/kp×0.55/滞后40ms/延迟2）",
+      "push_recovery": "PASS（t=2.5s 侧向1.2m/s、t=4s 前+侧0.9/-0.8m/s）"
     }
   },
   "limits": [

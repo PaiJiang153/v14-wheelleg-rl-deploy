@@ -46,7 +46,8 @@ def main() -> int:
 
     print("== 2) ONNX 测试向量 ==")
     import onnxruntime as ort
-    tv_files = [p for p in ("test_vectors.json", "test_vectors_wide.json")
+    tv_files = [p for p in ("test_vectors.json", "test_vectors_wide.json",
+                            "test_vectors_dr.json")
                 if (PKG / "evidence" / p).is_file()]
     worst = 0.0
     for tv_name in tv_files:

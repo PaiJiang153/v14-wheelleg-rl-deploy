@@ -1,0 +1,770 @@
+[
+  {
+    "variant": "dr_rand0",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.42,
+    "final_height_m": 0.177969,
+    "vx_body": -0.010997,
+    "wz": -0.011966,
+    "tilt_mean_deg": 1.171514,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11",
+    "dr_params": {
+      "base_mass_add": 2.029333826521821,
+      "com_offset": [
+        0.0043845645687987074,
+        -0.0032455507529936083,
+        0.0
+      ],
+      "friction_scale": 0.891483452774969,
+      "effort_scale": 0.8168037289555592,
+      "kp_scale": 1.1915195229364308,
+      "actuator_tau": 0.003944073757650452,
+      "delay_steps": 2
+    }
+  },
+  {
+    "variant": "dr_rand0",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.42,
+    "final_height_m": 0.179947,
+    "vx_body": 0.482199,
+    "wz": -0.027989,
+    "tilt_mean_deg": 0.649512,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11",
+    "dr_params": {
+      "base_mass_add": 2.029333826521821,
+      "com_offset": [
+        0.0043845645687987074,
+        -0.0032455507529936083,
+        0.0
+      ],
+      "friction_scale": 0.891483452774969,
+      "effort_scale": 0.8168037289555592,
+      "kp_scale": 1.1915195229364308,
+      "actuator_tau": 0.003944073757650452,
+      "delay_steps": 2
+    }
+  },
+  {
+    "variant": "dr_rand1",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.47,
+    "final_height_m": 0.173918,
+    "vx_body": -0.036808,
+    "wz": -0.010037,
+    "tilt_mean_deg": 1.232226,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11",
+    "dr_params": {
+      "base_mass_add": 0.2516754744405858,
+      "com_offset": [
+        0.0061873535175352,
+        -0.00926608965444378,
+        0.0
+      ],
+      "friction_scale": 1.1301444097665132,
+      "effort_scale": 1.1254759818095437,
+      "kp_scale": 0.8793560014061051,
+      "actuator_tau": 0.01606534373784847,
+      "delay_steps": 0
+    }
+  },
+  {
+    "variant": "dr_rand1",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.47,
+    "final_height_m": 0.175208,
+    "vx_body": 0.411935,
+    "wz": -0.037138,
+    "tilt_mean_deg": 0.561254,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11",
+    "dr_params": {
+      "base_mass_add": 0.2516754744405858,
+      "com_offset": [
+        0.0061873535175352,
+        -0.00926608965444378,
+        0.0
+      ],
+      "friction_scale": 1.1301444097665132,
+      "effort_scale": 1.1254759818095437,
+      "kp_scale": 0.8793560014061051,
+      "actuator_tau": 0.01606534373784847,
+      "delay_steps": 0
+    }
+  },
+  {
+    "variant": "dr_rand2",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.49,
+    "final_height_m": 0.172121,
+    "vx_body": -0.078037,
+    "wz": 0.005292,
+    "tilt_mean_deg": 4.036762,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11",
+    "dr_params": {
+      "base_mass_add": 0.5927730990559749,
+      "com_offset": [
+        0.016148547530901797,
+        0.009977439149643236,
+        0.0
+      ],
+      "friction_scale": 1.489772838117667,
+      "effort_scale": 1.1510543941728988,
+      "kp_scale": 0.8861917610874865,
+      "actuator_tau": 0.007988175201963193,
+      "delay_steps": 1
+    }
+  },
+  {
+    "variant": "dr_rand2",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.48,
+    "final_height_m": 0.173654,
+    "vx_body": 0.346714,
+    "wz": -0.004669,
+    "tilt_mean_deg": 2.443229,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11",
+    "dr_params": {
+      "base_mass_add": 0.5927730990559749,
+      "com_offset": [
+        0.016148547530901797,
+        0.009977439149643236,
+        0.0
+      ],
+      "friction_scale": 1.489772838117667,
+      "effort_scale": 1.1510543941728988,
+      "kp_scale": 0.8861917610874865,
+      "actuator_tau": 0.007988175201963193,
+      "delay_steps": 1
+    }
+  },
+  {
+    "variant": "dr_rand3",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.53,
+    "final_height_m": 0.169062,
+    "vx_body": -0.002071,
+    "wz": -0.003714,
+    "tilt_mean_deg": 0.22534,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11",
+    "dr_params": {
+      "base_mass_add": 2.238137164843865,
+      "com_offset": [
+        0.0008305270117022233,
+        0.002030283630858127,
+        0.0
+      ],
+      "friction_scale": 1.385487580107597,
+      "effort_scale": 1.0885626979580703,
+      "kp_scale": 0.827108069364732,
+      "actuator_tau": 0.007796893091628745,
+      "delay_steps": 2
+    }
+  },
+  {
+    "variant": "dr_rand3",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.51,
+    "final_height_m": 0.169709,
+    "vx_body": 0.448702,
+    "wz": -0.027284,
+    "tilt_mean_deg": 0.485276,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11",
+    "dr_params": {
+      "base_mass_add": 2.238137164843865,
+      "com_offset": [
+        0.0008305270117022233,
+        0.002030283630858127,
+        0.0
+      ],
+      "friction_scale": 1.385487580107597,
+      "effort_scale": 1.0885626979580703,
+      "kp_scale": 0.827108069364732,
+      "actuator_tau": 0.007796893091628745,
+      "delay_steps": 2
+    }
+  },
+  {
+    "variant": "dr_rand4",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.45,
+    "final_height_m": 0.177109,
+    "vx_body": -0.051304,
+    "wz": 0.002034,
+    "tilt_mean_deg": 5.755978,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11",
+    "dr_params": {
+      "base_mass_add": 0.023106373861878082,
+      "com_offset": [
+        0.027192050882600547,
+        -0.011166561839317742,
+        0.0
+      ],
+      "friction_scale": 0.9696146842324069,
+      "effort_scale": 0.9682517708658869,
+      "kp_scale": 1.0708941748381686,
+      "actuator_tau": 0.014088513862577576,
+      "delay_steps": 0
+    }
+  },
+  {
+    "variant": "dr_rand4",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.46,
+    "final_height_m": 0.17839,
+    "vx_body": 0.442802,
+    "wz": -0.014675,
+    "tilt_mean_deg": 5.182578,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11",
+    "dr_params": {
+      "base_mass_add": 0.023106373861878082,
+      "com_offset": [
+        0.027192050882600547,
+        -0.011166561839317742,
+        0.0
+      ],
+      "friction_scale": 0.9696146842324069,
+      "effort_scale": 0.9682517708658869,
+      "kp_scale": 1.0708941748381686,
+      "actuator_tau": 0.014088513862577576,
+      "delay_steps": 0
+    }
+  },
+  {
+    "variant": "dr_rand5",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.43,
+    "final_height_m": 0.178815,
+    "vx_body": -0.008121,
+    "wz": 0.000602,
+    "tilt_mean_deg": 1.979934,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11",
+    "dr_params": {
+      "base_mass_add": 1.5203048463378148,
+      "com_offset": [
+        0.007191648709183441,
+        0.018176973544204004,
+        0.0
+      ],
+      "friction_scale": 1.4891636923662281,
+      "effort_scale": 0.8658326270178277,
+      "kp_scale": 1.2001145203405013,
+      "actuator_tau": 0.012354325937004758,
+      "delay_steps": 2
+    }
+  },
+  {
+    "variant": "dr_rand5",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.41,
+    "final_height_m": 0.181022,
+    "vx_body": 0.499931,
+    "wz": 0.007859,
+    "tilt_mean_deg": 1.479125,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "v11",
+    "dr_params": {
+      "base_mass_add": 1.5203048463378148,
+      "com_offset": [
+        0.007191648709183441,
+        0.018176973544204004,
+        0.0
+      ],
+      "friction_scale": 1.4891636923662281,
+      "effort_scale": 0.8658326270178277,
+      "kp_scale": 1.2001145203405013,
+      "actuator_tau": 0.012354325937004758,
+      "delay_steps": 2
+    }
+  },
+  {
+    "variant": "dr_rand0",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.45,
+    "final_height_m": 0.176889,
+    "vx_body": -0.00291,
+    "wz": 1.5e-05,
+    "tilt_mean_deg": 0.397897,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr",
+    "dr_params": {
+      "base_mass_add": 2.029333826521821,
+      "com_offset": [
+        0.0043845645687987074,
+        -0.0032455507529936083,
+        0.0
+      ],
+      "friction_scale": 0.891483452774969,
+      "effort_scale": 0.8168037289555592,
+      "kp_scale": 1.1915195229364308,
+      "actuator_tau": 0.003944073757650452,
+      "delay_steps": 2
+    }
+  },
+  {
+    "variant": "dr_rand0",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.47,
+    "final_height_m": 0.179794,
+    "vx_body": 0.458498,
+    "wz": 0.007931,
+    "tilt_mean_deg": 0.272516,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr",
+    "dr_params": {
+      "base_mass_add": 2.029333826521821,
+      "com_offset": [
+        0.0043845645687987074,
+        -0.0032455507529936083,
+        0.0
+      ],
+      "friction_scale": 0.891483452774969,
+      "effort_scale": 0.8168037289555592,
+      "kp_scale": 1.1915195229364308,
+      "actuator_tau": 0.003944073757650452,
+      "delay_steps": 2
+    }
+  },
+  {
+    "variant": "dr_rand1",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.54,
+    "final_height_m": 0.173188,
+    "vx_body": -0.018262,
+    "wz": -0.004586,
+    "tilt_mean_deg": 0.561174,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr",
+    "dr_params": {
+      "base_mass_add": 0.2516754744405858,
+      "com_offset": [
+        0.0061873535175352,
+        -0.00926608965444378,
+        0.0
+      ],
+      "friction_scale": 1.1301444097665132,
+      "effort_scale": 1.1254759818095437,
+      "kp_scale": 0.8793560014061051,
+      "actuator_tau": 0.01606534373784847,
+      "delay_steps": 0
+    }
+  },
+  {
+    "variant": "dr_rand1",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.55,
+    "final_height_m": 0.177288,
+    "vx_body": 0.429781,
+    "wz": -0.000145,
+    "tilt_mean_deg": 0.32067,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr",
+    "dr_params": {
+      "base_mass_add": 0.2516754744405858,
+      "com_offset": [
+        0.0061873535175352,
+        -0.00926608965444378,
+        0.0
+      ],
+      "friction_scale": 1.1301444097665132,
+      "effort_scale": 1.1254759818095437,
+      "kp_scale": 0.8793560014061051,
+      "actuator_tau": 0.01606534373784847,
+      "delay_steps": 0
+    }
+  },
+  {
+    "variant": "dr_rand2",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.56,
+    "final_height_m": 0.17799,
+    "vx_body": -0.008631,
+    "wz": 6.1e-05,
+    "tilt_mean_deg": 0.324092,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr",
+    "dr_params": {
+      "base_mass_add": 0.5927730990559749,
+      "com_offset": [
+        0.016148547530901797,
+        0.009977439149643236,
+        0.0
+      ],
+      "friction_scale": 1.489772838117667,
+      "effort_scale": 1.1510543941728988,
+      "kp_scale": 0.8861917610874865,
+      "actuator_tau": 0.007988175201963193,
+      "delay_steps": 1
+    }
+  },
+  {
+    "variant": "dr_rand2",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.56,
+    "final_height_m": 0.177081,
+    "vx_body": 0.433897,
+    "wz": 0.017678,
+    "tilt_mean_deg": 0.028548,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr",
+    "dr_params": {
+      "base_mass_add": 0.5927730990559749,
+      "com_offset": [
+        0.016148547530901797,
+        0.009977439149643236,
+        0.0
+      ],
+      "friction_scale": 1.489772838117667,
+      "effort_scale": 1.1510543941728988,
+      "kp_scale": 0.8861917610874865,
+      "actuator_tau": 0.007988175201963193,
+      "delay_steps": 1
+    }
+  },
+  {
+    "variant": "dr_rand3",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.6,
+    "final_height_m": 0.172315,
+    "vx_body": -0.024153,
+    "wz": -0.010854,
+    "tilt_mean_deg": 0.693211,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr",
+    "dr_params": {
+      "base_mass_add": 2.238137164843865,
+      "com_offset": [
+        0.0008305270117022233,
+        0.002030283630858127,
+        0.0
+      ],
+      "friction_scale": 1.385487580107597,
+      "effort_scale": 1.0885626979580703,
+      "kp_scale": 0.827108069364732,
+      "actuator_tau": 0.007796893091628745,
+      "delay_steps": 2
+    }
+  },
+  {
+    "variant": "dr_rand3",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.6,
+    "final_height_m": 0.172847,
+    "vx_body": 0.431131,
+    "wz": -0.000359,
+    "tilt_mean_deg": 0.174218,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr",
+    "dr_params": {
+      "base_mass_add": 2.238137164843865,
+      "com_offset": [
+        0.0008305270117022233,
+        0.002030283630858127,
+        0.0
+      ],
+      "friction_scale": 1.385487580107597,
+      "effort_scale": 1.0885626979580703,
+      "kp_scale": 0.827108069364732,
+      "actuator_tau": 0.007796893091628745,
+      "delay_steps": 2
+    }
+  },
+  {
+    "variant": "dr_rand4",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.52,
+    "final_height_m": 0.178921,
+    "vx_body": -0.00628,
+    "wz": 0.003005,
+    "tilt_mean_deg": 0.469489,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr",
+    "dr_params": {
+      "base_mass_add": 0.023106373861878082,
+      "com_offset": [
+        0.027192050882600547,
+        -0.011166561839317742,
+        0.0
+      ],
+      "friction_scale": 0.9696146842324069,
+      "effort_scale": 0.9682517708658869,
+      "kp_scale": 1.0708941748381686,
+      "actuator_tau": 0.014088513862577576,
+      "delay_steps": 0
+    }
+  },
+  {
+    "variant": "dr_rand4",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.52,
+    "final_height_m": 0.180576,
+    "vx_body": 0.443541,
+    "wz": 0.016937,
+    "tilt_mean_deg": 0.341815,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr",
+    "dr_params": {
+      "base_mass_add": 0.023106373861878082,
+      "com_offset": [
+        0.027192050882600547,
+        -0.011166561839317742,
+        0.0
+      ],
+      "friction_scale": 0.9696146842324069,
+      "effort_scale": 0.9682517708658869,
+      "kp_scale": 1.0708941748381686,
+      "actuator_tau": 0.014088513862577576,
+      "delay_steps": 0
+    }
+  },
+  {
+    "variant": "dr_rand5",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.46,
+    "final_height_m": 0.17848,
+    "vx_body": -0.002175,
+    "wz": 0.00461,
+    "tilt_mean_deg": 0.35535,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr",
+    "dr_params": {
+      "base_mass_add": 1.5203048463378148,
+      "com_offset": [
+        0.007191648709183441,
+        0.018176973544204004,
+        0.0
+      ],
+      "friction_scale": 1.4891636923662281,
+      "effort_scale": 0.8658326270178277,
+      "kp_scale": 1.2001145203405013,
+      "actuator_tau": 0.012354325937004758,
+      "delay_steps": 2
+    }
+  },
+  {
+    "variant": "dr_rand5",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.49,
+    "final_height_m": 0.178603,
+    "vx_body": 0.464433,
+    "wz": 0.020965,
+    "tilt_mean_deg": 0.336589,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [],
+    "policy": "dr",
+    "dr_params": {
+      "base_mass_add": 1.5203048463378148,
+      "com_offset": [
+        0.007191648709183441,
+        0.018176973544204004,
+        0.0
+      ],
+      "friction_scale": 1.4891636923662281,
+      "effort_scale": 0.8658326270178277,
+      "kp_scale": 1.2001145203405013,
+      "actuator_tau": 0.012354325937004758,
+      "delay_steps": 2
+    }
+  }
+]

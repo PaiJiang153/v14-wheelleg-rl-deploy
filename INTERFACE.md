@@ -7,7 +7,7 @@
 
 | 项 | 值 |
 | --- | --- |
-| 文件 | **推荐** `policy/v14_rise_wide_deploy.onnx`（v1.1 宽指令）/ `policy/v14_rise_deploy.onnx`（v1.0 保守档）/ `policy/v14_full_closed_deploy.onnx`（平地） |
+| 文件 | `policy/v14_rise_dr_deploy.onnx`（v1.2 鲁棒档）/ `policy/v14_rise_wide_deploy.onnx`（v1.1 宽指令）/ `policy/v14_rise_deploy.onnx`（v1.0 保守档）/ `policy/v14_full_closed_deploy.onnx`（平地） |
 | sha256 | 见 `SHA256SUMS.txt` / `evidence/provenance.json` |
 | 输入 | 名 `obs`，形状 `(batch, 125)`，dtype **float32**；**只有这一个输入** |
 | 输出 | 名 `actions`，形状 `(batch, 6)`，dtype float32 |

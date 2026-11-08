@@ -1,0 +1,130 @@
+[
+  {
+    "variant": "push_+0.6mps",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.43,
+    "final_height_m": 0.179183,
+    "vx_body": 0.028844,
+    "wz": -0.05698,
+    "tilt_mean_deg": 3.197294,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [
+      {
+        "t": 2.5099999999999687,
+        "dvx": 0.0,
+        "dvy": 1.2,
+        "dwz": 0.0
+      },
+      {
+        "t": 4.009999999999937,
+        "dvx": 0.9,
+        "dvy": -0.8,
+        "dwz": 0.0
+      }
+    ],
+    "policy": "v11"
+  },
+  {
+    "variant": "push_+0.6mps",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.42,
+    "final_height_m": 0.180497,
+    "vx_body": 0.558747,
+    "wz": -0.066147,
+    "tilt_mean_deg": 2.665838,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [
+      {
+        "t": 2.5099999999999687,
+        "dvx": 0.0,
+        "dvy": 1.2,
+        "dwz": 0.0
+      },
+      {
+        "t": 4.009999999999937,
+        "dvx": 0.9,
+        "dvy": -0.8,
+        "dwz": 0.0
+      }
+    ],
+    "policy": "v11"
+  },
+  {
+    "variant": "push_+0.6mps",
+    "case": "stand",
+    "cmd": [
+      0.0,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.46,
+    "final_height_m": 0.178179,
+    "vx_body": 0.093503,
+    "wz": -0.000613,
+    "tilt_mean_deg": 1.087258,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [
+      {
+        "t": 2.5099999999999687,
+        "dvx": 0.0,
+        "dvy": 1.2,
+        "dwz": 0.0
+      },
+      {
+        "t": 4.009999999999937,
+        "dvx": 0.9,
+        "dvy": -0.8,
+        "dwz": 0.0
+      }
+    ],
+    "policy": "dr"
+  },
+  {
+    "variant": "push_+0.6mps",
+    "case": "fwd_0p5",
+    "cmd": [
+      0.5,
+      0.0,
+      0.18
+    ],
+    "rise_success": true,
+    "rise_time_s": 0.48,
+    "final_height_m": 0.179257,
+    "vx_body": 0.575489,
+    "wz": 0.004504,
+    "tilt_mean_deg": 1.213326,
+    "fell": null,
+    "verdict": "PASS",
+    "pushes": [
+      {
+        "t": 2.5099999999999687,
+        "dvx": 0.0,
+        "dvy": 1.2,
+        "dwz": 0.0
+      },
+      {
+        "t": 4.009999999999937,
+        "dvx": 0.9,
+        "dvy": -0.8,
+        "dwz": 0.0
+      }
+    ],
+    "policy": "dr"
+  }
+]

@@ -30,7 +30,11 @@ python runtime/sim2sim_replay.py --onnx policy/v14_rise_deploy.onnx \
 
 ## 已验证（完整闭链 MuJoCo，40/40/20 N·m）
 
-**v1.1（推荐，`v14_rise_wide_deploy.onnx`）**：从趴卧姿 22 条宽指令矩阵 **22/22 PASS** ——
+**v1.2（鲁棒档，`v14_rise_dr_deploy.onnx`）**：强域随机化训练（质量/质心/摩擦/关节/电机/kp/kd/滞后/
+动作延迟/推力/编码器偏置/趴卧姿态）；DR 分布内随机组合 12/12 起身，速度跟踪误差标准差
+**-73%**、最大误差 -54%，单项扰动与推力恢复 PASS。详见 `reports/robust_cmd_matrix.md`。
+
+**v1.1（性能档，`v14_rise_wide_deploy.onnx`）**：从趴卧姿 22 条宽指令矩阵 **22/22 PASS** ——
 vx ±1.5 m/s、wz ±1.2 rad/s、高度 0.14–0.21 m；平均 |vx 误差| **0.035**、|wz 误差| **0.020**、
 |高度误差| **0.003 m**，起身 **0.34–0.50 s**；扰动种子 1/7/42 也 PASS。详见 `reports/wide_cmd_matrix.md`。
 
