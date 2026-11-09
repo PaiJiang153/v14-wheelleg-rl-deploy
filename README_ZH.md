@@ -121,6 +121,18 @@ cmd_h = hc.step(dt=0.01)                     # 作为观测 commands[2] 使用
 录像/曲线见 `media/height_demo/`，明细 `reports/height_change.md` 与
 `reports/height_{stand,walk,mixed}.json`。
 
+## 5.2 过地形 / 台阶能力现状（v1.4，阶段性）
+
+- **轻粗糙地形（±2 cm）可用**：v1.3 策略从站姿以 0.4 m/s 指令可前进 3.97 m（体速 0.36 m/s、
+  倾角 ≤4°）；地形训练后 ±3 cm 粗糙地形更平顺（倾角 22.5°→3.7°）。
+- **台阶 / 跳台阶尚未学会**：台阶垂直面反力把腿 PD 压弯（base 下沉到 0.14–0.15 m），
+  盲走策略缺少台阶距离信息；高度指令上限 0.21 m 也限制跳跃冲量。
+- 已交付训练/验收设施：`--task terrain`（台阶/粗糙/障碍 + 地形课程 + 爬升奖励）、
+  `sim2sim/terrain_scenes.py` + `sim2sim/terrain_eval.py`、`render_v14.py --xml`、
+  `height_demo.py --xml/--wave`。
+- 部署建议：目前仍用 v1.3 `v14_rise_anneal_deploy.onnx`（平坦/轻粗糙）；台阶场景等后续
+  「跳跃课程 + 高度指令扩展到 0.30 m」版本。详见 `reports/terrain_status.md`。
+
 ## 6. 已知限制（不要外推）
 
 - **只在 MuJoCo 完整闭链模型上验证**，没有实车数据；实车必须重新验证。
@@ -166,12 +178,14 @@ evidence/
 reports/
   TRAINING_REPORT.md       ← 完整训练报告（含失败尝试、诊断、复现命令）
   robust_cmd_matrix.md / robust_v1*.json（v1.2 鲁棒性验收）
+  terrain_status.md / terrain_easy_summary.json（v1.4 过地形现状）
   wide_cmd_matrix.md / wide_compare.json / wide_summary.json
   wide_jitter_seed{1,7,42}_summary.json
   rise_from_prone_sim2sim_summary.md/json
   flat_sim2sim_summary.md/json
 media/
   rise_sequence.png / rise_preview.gif / all_scenarios_1x.mp4 / montage.png / montage_flat.png
+  height_demo/（变高度三模式录像/曲线）  terrain_demo/（±2 cm 粗糙地形通过录像）
 ```
 
 ## 8. 如果接手方要移植到嵌入式
